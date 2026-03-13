@@ -50,7 +50,7 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate }) => {
             </button>
             <div className="nav-dropdown-panel">
               <span className="nav-dd-label">Health</span>
-              <button className="nav-dd-item" onClick={() => nav('championhealth')}>Champ Plan (Champion Health)</button>
+              <button className="nav-dd-item" onClick={() => nav('championhealth')}>Creative Care</button>
               <div className="nav-dd-divider" />
               <span className="nav-dd-label">Tech</span>
               <button className="nav-dd-item" onClick={() => nav('clarity')}>Clarity Commissions</button>
@@ -76,7 +76,7 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate }) => {
               <button className="nav-dd-item" onClick={() => scrollOrNav('ecosystem')}>Network Overview</button>
               <button className="nav-dd-item" onClick={() => nav('wealthwave')}>WealthWave Partners</button>
               <div className="nav-dd-divider" />
-              <a className="nav-dd-item" href="mailto:partners@csp.com?subject=Partnership%20Inquiry">Become a Partner →</a>
+              <a className="nav-dd-item" href="mailto:michelle@creativesolutionspartners.com?subject=Partnership%20Inquiry">Become a Partner →</a>
             </div>
           </div>
 
@@ -101,7 +101,7 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate }) => {
 
           {/* Solutions group */}
           <button className="mobile-group-label" disabled>Solutions</button>
-          <button className="mobile-group-item" onClick={() => nav('championhealth')}>Champion Health</button>
+          <button className="mobile-group-item" onClick={() => nav('championhealth')}>Creative Care</button>
           <button className="mobile-group-item" onClick={() => nav('clarity')}>Clarity Commissions</button>
           <button className="mobile-group-item" onClick={() => nav('bizboost')}>Biz Boost Agency</button>
           <button className="mobile-group-item" onClick={() => nav('wealthwave')}>WealthWave</button>

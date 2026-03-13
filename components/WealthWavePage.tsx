@@ -35,10 +35,10 @@ export const WealthWavePage: React.FC<WealthWavePageProps> = ({ onBack, onNaviga
           </div>
           <div className="w-full lg:w-1/3 pb-2">
              <div className="flex flex-col sm:flex-row gap-4">
-                <a href="mailto:partners@csp.com?subject=WealthWave%20Book%20Request" className="bg-[#C5A059] text-[#0a0a0a] px-8 py-4 font-bold hover:bg-[#d4b36a] transition-colors w-full md:w-auto text-center rounded-sm shadow-[0_0_40px_-10px_rgba(197,160,89,0.5)]">
+                <a href="mailto:michelle@creativesolutionspartners.com?subject=WealthWave%20Book%20Request" className="bg-[#C5A059] text-[#0a0a0a] px-8 py-4 font-bold hover:bg-[#d4b36a] transition-colors w-full md:w-auto text-center rounded-sm shadow-[0_0_40px_-10px_rgba(197,160,89,0.5)]">
                    Get the Book
                 </a>
-                <a href="mailto:partners@csp.com?subject=WealthWave%20Mission%20Inquiry" className="border border-gray-600 text-white px-8 py-4 font-medium hover:bg-gray-800 transition-colors w-full md:w-auto text-center rounded-sm">
+                <a href="mailto:michelle@creativesolutionspartners.com?subject=WealthWave%20Mission%20Inquiry" className="border border-gray-600 text-white px-8 py-4 font-medium hover:bg-gray-800 transition-colors w-full md:w-auto text-center rounded-sm">
                    Join Mission
                 </a>
              </div>
@@ -138,7 +138,7 @@ export const WealthWavePage: React.FC<WealthWavePageProps> = ({ onBack, onNaviga
                <p className="text-gray-400 mb-8 leading-relaxed">
                   Financial stress is the #1 distraction in the workplace. Implement our <strong>Financial Wellness Program</strong> as an employee benefit at no cost to your company. Educate your team, reduce turnover, and increase productivity.
                </p>
-               <a href="mailto:partners@csp.com?subject=WealthWave%20Financial%20Wellness%20Workshop" className="text-[#C5A059] font-bold uppercase tracking-widest text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+               <a href="mailto:michelle@creativesolutionspartners.com?subject=WealthWave%20Financial%20Wellness%20Workshop" className="text-[#C5A059] font-bold uppercase tracking-widest text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
                   Schedule Workshop <ArrowLeft className="rotate-180" size={16} />
                </a>
             </div>
@@ -151,7 +151,7 @@ export const WealthWavePage: React.FC<WealthWavePageProps> = ({ onBack, onNaviga
                <p className="text-gray-400 mb-8 leading-relaxed">
                   Join the mission to eradicate financial illiteracy. Whether you are seeking a career change or a side revenue stream, WealthWave offers a scalable platform with world-class mentorship and technology.
                </p>
-               <a href="mailto:partners@csp.com?subject=WealthWave%20Partnership%20Inquiry" className="text-[#C5A059] font-bold uppercase tracking-widest text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
+               <a href="mailto:michelle@creativesolutionspartners.com?subject=WealthWave%20Partnership%20Inquiry" className="text-[#C5A059] font-bold uppercase tracking-widest text-sm flex items-center gap-2 group-hover:gap-3 transition-all">
                   Start Your Journey <ArrowLeft className="rotate-180" size={16} />
                </a>
             </div>

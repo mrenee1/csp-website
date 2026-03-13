@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { ServiceData } from '../types';
 import { PageName } from '../types';
 
-const LEAD_EMAIL = 'partners@csp.com';
+const LEAD_EMAIL = 'michelle@creativesolutionspartners.com';
 
 const getPlatformCardStyle = (platformId: string): { cardClasses: string; accentColor: string } => {
   switch (platformId) {

@@ -12,7 +12,7 @@ export const Newsletter: React.FC = () => {
     e.preventDefault();
     const subject = encodeURIComponent('Newsletter Signup - Insights');
     const body = encodeURIComponent(`Email: ${email}\n\nI would like to receive strategic insights on health, wealth, and technology.`);
-    window.location.href = `mailto:partners@csp.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:michelle@creativesolutionspartners.com?subject=${subject}&body=${body}`;
     setStatus('success');
     setTimeout(() => {
       setIsOpen(false);
