@@ -123,6 +123,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       {/* ════════ ANSWER BRIDGE ════════ */}
       <Reveal>
         <div className="answer-bridge">
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 32 }}>
+            <img 
+              src="/images/partnership-handshake.jpg" 
+              alt="Partnership" 
+              style={{ width: '100%', maxWidth: 600, height: 300, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
+            />
+          </div>
           <h2>What would it be like if you already knew<br/><strong>it would work the first time?</strong></h2>
           <p>That's not a sales pitch. That's the standard we hold ourselves to. We don't recommend tools we haven't vetted. We don't send you a list of vendors. We send <em>our people</em> — expert solution advisors who solve problems alongside you in the field.</p>
           <div className="product-stmt">OUR GOAL IS TO GROW. OUR PRODUCT IS PARTNERSHIP.</div>
@@ -181,6 +188,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <div className="roi-copy">
             <Reveal>
               <div className="section-tag" style={{ justifyContent: 'flex-start' }}>Live ROI</div>
+              <div style={{ marginBottom: 24 }}>
+                <img 
+                  src="/images/data-analytics.jpg" 
+                  alt="Data Analytics" 
+                  style={{ width: '100%', maxWidth: 450, height: 220, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
+                />
+              </div>
               <h2>See your numbers<br/>move <em>in real time.</em></h2>
               <p>Every day you delay a solution is a day it costs you. Adjust the inputs and watch what partnership with CSP would mean for your business — today, this month, this year.</p>
             </Reveal>
@@ -279,11 +293,18 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </Reveal>
           </div>
           <Reveal className="reveal-d2">
-            <div className="field-stats">
-              <div className="fs-card"><span className="fs-num">1</span><span className="fs-label">Point of contact for every service in your business</span></div>
-              <div className="fs-card"><span className="fs-num">∞</span><span className="fs-label">Growing ecosystem — new solutions added monthly</span></div>
-              <div className="fs-card"><span className="fs-num">0</span><span className="fs-label">Vendors to manage on your own</span></div>
-              <div className="fs-card"><span className="fs-num">3</span><span className="fs-label">Core pillars: Health, Wealth, Technology</span></div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+              <img 
+                src="/images/connection.jpg" 
+                alt="Human Connection" 
+                style={{ width: '100%', maxWidth: 500, height: 250, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
+              />
+              <div className="field-stats">
+                <div className="fs-card"><span className="fs-num">1</span><span className="fs-label">Point of contact for every service in your business</span></div>
+                <div className="fs-card"><span className="fs-num">∞</span><span className="fs-label">Growing ecosystem — new solutions added monthly</span></div>
+                <div className="fs-card"><span className="fs-num">0</span><span className="fs-label">Vendors to manage on your own</span></div>
+                <div className="fs-card"><span className="fs-num">3</span><span className="fs-label">Core pillars: Health, Wealth, Technology</span></div>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -291,6 +312,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
       {/* ════════ FINAL CTA ════════ */}
       <section id="contact" className="final-cta">
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 32 }}>
+          <img 
+            src="/images/innovation.jpg" 
+            alt="Innovation" 
+            style={{ width: '100%', maxWidth: 400, height: 220, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
+          />
+        </div>
         <div className="section-tag">The First Step</div>
         <h2>Let's build<br/>something <em>that actually works.</em></h2>
         <p>No fluff. No vendor directory. Just an honest conversation about where you are, what's holding you back, and what it would look like to have a real partner in your corner from day one.</p>
