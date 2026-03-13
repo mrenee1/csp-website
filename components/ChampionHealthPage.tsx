@@ -259,7 +259,7 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
           <div className="lg:col-span-4">
             <h2 className="text-4xl md:text-5xl font-serif text-white mb-8 leading-tight">The Wellbeing <br />Imperative</h2>
             <p className="text-gray-400 leading-relaxed text-lg font-light">
-              Reactive wellness programs fail because they treat symptoms, not root causes. Champion Health takes a fundamentally different approach.
+              Reactive wellness programs fail because they treat symptoms, not root causes. Creative Care takes a fundamentally different approach.
             </p>
             <div className="mt-12 h-px w-24 bg-[#2DD4BF]"></div>
           </div>
@@ -289,7 +289,7 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
         <RevealSection className="max-w-4xl mx-auto text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-serif text-white mb-8">A Whole-Person Approach</h2>
           <p className="text-xl md:text-2xl text-gray-400 leading-relaxed font-light">
-            Champion Health addresses <strong>six interconnected pillars</strong> of wellbeing, delivering personalized support that adapts to each individual.
+            Creative Care addresses <strong>six interconnected pillars</strong> of wellbeing, delivering personalized support that adapts to each individual.
           </p>
         </RevealSection>
 
@@ -317,7 +317,7 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
             </div>
             <h2 className="text-4xl md:text-6xl font-serif mb-8 leading-tight">Data That <br />Drives Action</h2>
             <p className="text-gray-400 text-xl leading-relaxed mb-12 font-light">
-              Champion Health transforms raw wellbeing data into strategic organizational intelligence. Real-time dashboards give HR and leadership the visibility they need to make informed, impactful decisions.
+              Creative Care transforms raw wellbeing data into strategic organizational intelligence. Real-time dashboards give HR and leadership the visibility they need to make informed, impactful decisions.
             </p>
             <ul className="space-y-6">
               {[
@@ -341,7 +341,7 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
                 <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
-                <span className="ml-4 text-[10px] text-gray-500 font-mono tracking-widest uppercase">insights.championhealth.co</span>
+                <span className="ml-4 text-[10px] text-gray-500 font-mono tracking-widest uppercase">insights.creativecare.co</span>
               </div>
               <div className="p-10 space-y-8">
                 <div className="grid grid-cols-3 gap-4">
@@ -377,13 +377,13 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
         </div>
       </section>
 
-      {/* Champion Health Difference - Comparison Table */}
+      {/* Creative Care Difference - Comparison Table */}
       <section className="py-32 md:py-48 bg-[#18181b]">
         <div className="px-6 md:px-12 lg:px-24">
           <RevealSection className="max-w-6xl mx-auto">
             <div className="mb-16 text-center md:text-left">
-              <h2 className="text-4xl font-serif text-white mb-4">The Champion Health Difference</h2>
-              <p className="text-xl text-gray-400 font-light">Why forward-thinking organizations choose Champion Health over generic wellness programs.</p>
+              <h2 className="text-4xl font-serif text-white mb-4">The Creative Care Difference</h2>
+              <p className="text-xl text-gray-400 font-light">Why forward-thinking organizations choose Creative Care over generic wellness programs.</p>
             </div>
 
             <div className="relative rounded-xl shadow-2xl border border-white/5 bg-[#0a0a0a] overflow-hidden">
@@ -392,7 +392,7 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
                   <thead>
                     <tr className="bg-[#0a0a0a] text-white">
                       <th className="p-8 font-bold text-xs uppercase tracking-[0.2em] w-1/4 sticky left-0 bg-[#0a0a0a] z-20">Capability</th>
-                      <th className="p-8 font-bold text-[#2DD4BF] text-xl w-1/4 bg-[#18181b] border-b-4 border-[#2DD4BF]">Champion Health</th>
+                      <th className="p-8 font-bold text-[#2DD4BF] text-xl w-1/4 bg-[#18181b] border-b-4 border-[#2DD4BF]">Creative Care</th>
                       <th className="p-8 font-medium text-gray-500 w-1/4 uppercase tracking-widest text-[10px]">Generic Wellness</th>
                       <th className="p-8 font-medium text-gray-500 w-1/4 uppercase tracking-widest text-[10px]">EAP Programs</th>
                     </tr>
@@ -429,7 +429,7 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
           <RevealSection>
             <h2 className="text-4xl md:text-6xl font-serif text-white mb-10 leading-tight">Built for Every Organization</h2>
             <p className="text-xl text-gray-400 mb-12 font-light leading-relaxed">
-              Champion Health scales from high-growth startups to global enterprises, adapting its clinical content and analytics to your unique workforce demographics.
+              Creative Care scales from high-growth startups to global enterprises, adapting its clinical content and analytics to your unique workforce demographics.
             </p>
             <ul className="space-y-10">
               {[

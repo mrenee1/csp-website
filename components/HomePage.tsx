@@ -114,7 +114,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="ticker-track">
           {[...Array(2)].map((_, rep) => (
             <React.Fragment key={rep}>
-              {['Champion Health', 'Clarity Commissions', 'Business Booster', 'WealthWave', 'Background Checks', 'Brand & Web Design', 'CC Processing', 'Business Consulting', 'Expert Advisors In The Field'].map((t) => (
+              {['Creative Care', 'Clarity Commissions', 'Business Booster', 'WealthWave', 'Background Checks', 'Brand & Web Design', 'CC Processing', 'Business Consulting', 'Expert Advisors In The Field'].map((t) => (
                 <span className="ticker-item" key={`${rep}-${t}`}>{t} <span className="ticker-sep">✦</span></span>
               ))}
             </React.Fragment>
@@ -191,10 +191,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 <div className="p-title">YOUR PEOPLE</div>
                 <div className="p-num">01/04</div>
               </div>
-              <div className="p-sub">Champion Health - Champ Plan</div>
+              <div className="p-sub">Creative Care - Creative Care</div>
               <div className="p-desc">Proactive health management for your team. Comprehensive care that keeps your people healthy and productive.</div>
               <div className="p-tags"><span className="p-tag">Unlimited PCP Visits</span><span className="p-tag">Prescription Benefits</span><span className="p-tag">Employee Wellness</span></div>
-              <button className="p-link" onClick={() => onNavigate('championhealth')}>Explore Champion Health →</button>
+              <button className="p-link" onClick={() => onNavigate('championhealth')}>Explore Creative Care →</button>
             </div>
           </Reveal>
           {/* YOUR OPERATIONS */}
@@ -340,12 +340,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   </select>
                 </div>
                 <div className="f-group"><label>Annual Turnover Rate (%)</label><input type="number" value={hTurn} onChange={e => setHTurn(+e.target.value || 0)} /></div>
-                <button className="tp-cta-link" onClick={() => onNavigate('championhealth')}>Get a Champion Health Quote →</button>
+                <button className="tp-cta-link" onClick={() => onNavigate('championhealth')}>Get a Creative Care Quote →</button>
               </div>
               <div>
                 <div className="tp-result">
                   <span className="big">${hSave > 999 ? fmt(hSave) : hSave.toLocaleString()}</span>
-                  <span className="lbl">Monthly Savings with Champ Plan</span>
+                  <span className="lbl">Monthly Savings with Creative Care</span>
                   <div className="tp-stats">
                     <div className="tp-stat"><span className="sv">${hAnnual > 999 ? fmt(hAnnual) : hAnnual.toLocaleString()}</span><span className="sl">Annual Savings</span></div>
                     <div className="tp-stat"><span className="sv">{hRetain}x</span><span className="sl">Retention Boost</span></div>
@@ -411,7 +411,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           </Reveal>
         </div>
         <div className="eco-grid">
-          <div className="eco-cell" onClick={() => onNavigate('championhealth')}><Reveal><span className="eco-badge">Health</span><div className="eco-name">Champion Health</div><div className="eco-desc">Employee wellness &amp; Champ Plan benefits</div></Reveal></div>
+          <div className="eco-cell" onClick={() => onNavigate('championhealth')}><Reveal><span className="eco-badge">Health</span><div className="eco-name">Creative Care</div><div className="eco-desc">Employee wellness &amp; Creative Care benefits</div></Reveal></div>
           <div className="eco-cell" onClick={() => onNavigate('clarity')}><Reveal className="reveal-d1"><span className="eco-badge">Operations</span><div className="eco-name">Clarity Commissions</div><div className="eco-desc">Commission tracking &amp; payroll automation</div></Reveal></div>
           <div className="eco-cell" onClick={() => onNavigate('bizboost')}><Reveal className="reveal-d2"><span className="eco-badge">Brand</span><div className="eco-name">Business Booster</div><div className="eco-desc">Web, apps, logos, branding &amp; social</div></Reveal></div>
           <div className="eco-cell" onClick={() => onNavigate('wealthwave')}><Reveal className="reveal-d3"><span className="eco-badge">Finance</span><div className="eco-name">WealthWave</div><div className="eco-desc">How The Money Works financial program</div><span className="eco-new">Partner</span></Reveal></div>
@@ -548,7 +548,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         </div>
         <div className="footer-col">
           <h4>Solutions</h4>
-          <button onClick={() => onNavigate('championhealth')}>Champion Health</button>
+          <button onClick={() => onNavigate('championhealth')}>Creative Care</button>
           <button onClick={() => onNavigate('clarity')}>Clarity Commissions</button>
           <button onClick={() => onNavigate('bizboost')}>Business Booster</button>
           <button onClick={() => onNavigate('wealthwave')}>WealthWave</button>

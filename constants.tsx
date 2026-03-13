@@ -21,7 +21,7 @@ export const NAV_STRUCTURE: NavItem[] = [
 export const FOOTER_PORTALS = [
   { label: 'Clarity Commissions', url: '#' },
   { label: 'WealthWave', url: '#' },
-  { label: 'Champion Health', url: '#' },
+  { label: 'Creative Care', url: '#' },
 ];
 
 export const TEAM_MEMBERS: TeamMember[] = [
@@ -70,7 +70,7 @@ export const SERVICES: Record<string, ServiceData> = {
     featuredPlatforms: [
       {
         id: 'championhealth',
-        title: 'Champion Health',
+        title: 'Creative Care',
         description: 'Personalized wellbeing platform designed to optimize physical and mental performance for teams.',
       }
     ]
