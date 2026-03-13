@@ -71,11 +71,11 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
 
           {/* Partners dropdown */}
           <div className="nav-dropdown-wrap">
-            <button className="nav-dropdown-trigger" onClick={() => scrollOrNav('ecosystem')}>
+            <button className="nav-dropdown-trigger" onClick={() => scrollOrNav('solutions')}>
               Partners <span className="dd-arrow">▼</span>
             </button>
             <div className="nav-dropdown-panel">
-              <button className="nav-dd-item" onClick={() => scrollOrNav('ecosystem')}>Network Overview</button>
+              <button className="nav-dd-item" onClick={() => scrollOrNav('solutions')}>Our Solutions</button>
               <div className="nav-dd-divider" />
               <button className="nav-dd-item" onClick={() => onNavigate('partner-application')}>Become a Partner →</button>
             </div>
@@ -126,7 +126,7 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
 
           {/* Partners group */}
           <button className="mobile-group-label" disabled>Partners</button>
-          <button className="mobile-group-item" onClick={() => scrollOrNav('ecosystem')}>Network Overview</button>
+          <button className="mobile-group-item" onClick={() => scrollOrNav('solutions')}>Our Solutions</button>
           <button className="mobile-group-item" onClick={() => { onNavigate('partner-application'); setMobileOpen(false); }}>Become a Partner</button>
 
           <button onClick={() => { window.open('https://csp-insights.replit.app', '_blank'); setMobileOpen(false); }}>Insights</button>

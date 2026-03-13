@@ -60,7 +60,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="hero-tagline">"Our goal is to grow. Our product is partnership."</div>
         <div className="hero-btns">
           <button className="btn-gold" onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}>Find Your Solution</button>
-          <button className="btn-ghost" onClick={() => document.getElementById('ecosystem')?.scrollIntoView({ behavior: 'smooth' })}>Explore Our Solutions</button>
+          <button className="btn-ghost" onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}>Explore Our Solutions</button>
         </div>
       </section>
 
@@ -225,33 +225,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           </Reveal>
         </div>
       </div>
-
-      {/* ════════ ECOSYSTEM ════════ */}
-      <section id="ecosystem" className="ecosystem">
-        <div className="eco-header">
-          <Reveal>
-            <div className="section-tag">The CSP Network</div>
-            <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(36px,4vw,56px)', fontWeight: 300, lineHeight: 1.1, marginBottom: 14, color: 'var(--text)' }}>
-              One partner. <em style={{ fontStyle: 'italic', color: 'var(--gold)' }}>Every solution.</em>
-            </h2>
-            <p style={{ fontSize: 16, color: 'var(--mid)', fontWeight: 300, lineHeight: 1.75 }}>Stop managing multiple vendors. Access our entire ecosystem through a single trusted relationship.</p>
-          </Reveal>
-        </div>
-        <div className="eco-grid">
-          <div className="eco-cell" onClick={() => onNavigate('championhealth')}><Reveal><span className="eco-badge">Health</span><div className="eco-name">Creative Care</div><div className="eco-desc">Employee wellness &amp; modern employer health solutions</div></Reveal></div>
-          <div className="eco-cell" onClick={() => onNavigate('clarity')}><Reveal className="reveal-d1"><span className="eco-badge">Technology</span><div className="eco-name">Clarity Commissions</div><div className="eco-desc">Commission tracking &amp; compensation transparency</div></Reveal></div>
-          <div className="eco-cell" onClick={() => onNavigate('wealthwave')}><Reveal className="reveal-d2"><span className="eco-badge">Wealth</span><div className="eco-name">WealthWave</div><div className="eco-desc">Financial literacy &amp; wealth-building education</div></Reveal></div>
-          <div className="eco-cell" onClick={() => onNavigate('bizboost')}><Reveal className="reveal-d3"><span className="eco-badge">Technology</span><div className="eco-name">Creative Web</div><div className="eco-desc">Websites, branding &amp; digital growth systems</div></Reveal></div>
-          <div className="eco-cell" onClick={() => onNavigate('creativepayments')}><Reveal className="reveal-d4"><span className="eco-badge">Technology</span><div className="eco-name">Impact Payments</div><div className="eco-desc">Payment infrastructure &amp; merchant services</div></Reveal></div>
-          <Reveal className="reveal-d3">
-            <div className="eco-join">
-              <h4>Your solution belongs here.</h4>
-              <p>We're always expanding. If you serve business owners and share our standard of excellence — let's talk partnership.</p>
-              <a href="mailto:michelle@creativesolutionspartners.com?subject=Partnership%20Inquiry">Apply to Partner →</a>
-            </div>
-          </Reveal>
-        </div>
-      </section>
 
       {/* ════════ IN THE FIELD ════════ */}
       <section className="field">
