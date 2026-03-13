@@ -77,8 +77,8 @@ export const SolutionPage: React.FC<{ data: ServiceData; onBack: () => void; onN
       </div>
 
       {/* Content Section - Dark layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-        <div className="p-12 lg:p-24 bg-[#0f0f0f]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
+        <div className="p-12 lg:p-24 bg-[#0f0f0f] flex flex-col">
           <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">The Challenge</h3>
           <p className="text-xl text-white leading-relaxed mb-8">{data.description}</p>
           <div className={`h-1 w-20 mb-8 ${data.id === 'health' ? 'bg-[#2DD4BF]' : data.id === 'wealth' ? 'bg-[#C5A059]' : 'bg-[#5D2E8E]'}`}></div>
@@ -88,9 +88,9 @@ export const SolutionPage: React.FC<{ data: ServiceData; onBack: () => void; onN
           </p>
 
           {data.featuredPlatforms && data.featuredPlatforms.length > 0 && (
-            <div className="mt-16 pt-8 border-t border-white/5">
+            <div className="mt-16 pt-8 border-t border-white/5 flex-grow flex flex-col">
                <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">Our Solutions</h3>
-               <div className="space-y-4">
+               <div className="space-y-4 flex-grow">
                  {data.featuredPlatforms.map((platform) => {
                    const { cardClasses, accentColor } = getPlatformCardStyle(platform.id);
                    const titleHoverClass = platform.id === 'bizboost' ? 'group-hover:text-[#00ffff]' : platform.id === 'clarity' ? 'group-hover:text-[#06b6d4]' : platform.id === 'championhealth' ? 'group-hover:text-[#2DD4BF]' : platform.id === 'creativepayments' ? 'group-hover:text-[#8b5cf6]' : 'group-hover:text-[#C5A059]';
@@ -113,9 +113,9 @@ export const SolutionPage: React.FC<{ data: ServiceData; onBack: () => void; onN
           )}
         </div>
 
-        <div className="p-12 lg:p-24 bg-[#18181b] border-l border-white/5">
+        <div className="p-12 lg:p-24 bg-[#18181b] border-l border-white/5 flex flex-col">
           <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-8">Key Capabilities</h3>
-          <div className="grid grid-cols-1 gap-4">
+          <div className="grid grid-cols-1 gap-4 flex-grow">
             {data.features.map((feature, idx) => (
               <div key={idx} className={`flex items-start gap-4 p-5 bg-[#0f0f0f] rounded-xl border transition-all duration-500 group/card ${getFeatureCardGlow(data.id)}`}>
                 <div className={`shrink-0 mt-0.5 w-2 h-2 rounded-full ${getAccentDot(data.id)}`}></div>

@@ -12,38 +12,24 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       {/* Header */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <Galaxy
-            starSpeed={0.2}
-            density={0.6}
-            hueShift={140}
-            speed={0.3}
-            glowIntensity={0.1}
-            saturation={0}
-            mouseRepulsion
-            repulsionStrength={2}
-            twinkleIntensity={0.3}
-            rotationSpeed={0}
-            transparent
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-950/60 via-purple-900/50 to-pink-950/60"></div>
-        <div className="relative py-24 px-6 md:px-12 lg:px-24">
+      <div className="bg-[#00FFCC] border-b border-white/20">
+        <div className="py-20 px-6 md:px-12 lg:px-24">
           <button 
             onClick={onBack}
-            className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-12 text-sm uppercase tracking-widest"
+            className="inline-flex items-center gap-2 text-[#0a0a0a]/70 hover:text-[#0a0a0a] transition-colors mb-12 text-sm uppercase tracking-widest"
           >
             <ArrowLeft size={16} /> Back Home
           </button>
           
-          <div className="max-w-4xl">
-            <h1 className="text-6xl md:text-8xl font-serif font-bold text-[#C9A84C] mb-8 drop-shadow-[0_0_12px_rgba(201,168,76,0.7)]">
-              Creative Web
+          <div className="text-center">
+            <h1 className="text-7xl md:text-9xl font-serif font-bold text-[#00FFCC] mb-2" style={{ WebkitTextStroke: '2px #0a0a0a', textShadow: '3px 3px 0px #0a0a0a' }}>
+              CREATIVE
             </h1>
-            
-            <p className="text-2xl md:text-3xl text-gray-300 font-light leading-relaxed max-w-3xl">
-              Websites, branding, and digital marketing that actually move the needle. We don't do average. Every goal, every word, every campaign is built to convert.
+            <h2 className="text-5xl md:text-7xl font-serif font-bold text-[#00FFCC] mb-6 tracking-widest" style={{ WebkitTextStroke: '2px #0a0a0a', textShadow: '3px 3px 0px #0a0a0a' }}>
+              WEB
+            </h2>
+            <p className="text-lg text-[#0a0a0a]/70 font-light tracking-wide">
+              Powered by Biz Boost Agency
             </p>
           </div>
         </div>
@@ -206,12 +192,6 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
             >
               Start Your Project
             </button>
-          </div>
-          <div className="mt-16 text-center">
-            <div className="inline-flex items-center gap-2 bg-[#FF2D92]/10 text-[#FF2D92] px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest border border-[#FF2D92]/20">
-              <span>⚡</span>
-              Powered by Biz Boost Agency
-            </div>
           </div>
         </section>
       </div>

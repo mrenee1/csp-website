@@ -240,18 +240,18 @@ export const ClarityPage: React.FC<{ onBack: () => void; onNavigate: (page: Page
            </p>
         </RevealSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-stretch">
            {[
              { icon: Calculator, title: "Decimal-Safe Engine", text: "We replace \"estimated\" floating-point math with decimal-perfect calculation engines. Zero drift. Zero rounding errors." },
              { icon: Lock, title: "Immutable Ledger", text: "Clarity is an append-only system. We do not overwrite data; we version it. Every adjustment creates a traceable lineage." },
              { icon: Layers, title: "Temporal Hierarchy", text: "Manage team structures across time. Pay based on the hierarchy as it existed at the point of sale, not the point of payout." }
            ].map((item, i) => (
-             <RevealSection key={i} delay={i * 150} className="p-12 bg-[#18181b] rounded-xl border border-white/5 hover:border-[#06b6d4]/40 hover:shadow-[0_0_40px_-10px_rgba(6,182,212,0.3)] transition-all duration-700 group flex flex-col items-center text-center">
-                <div className="w-16 h-16 rounded-full bg-[#06b6d4]/10 flex items-center justify-center mb-8 text-[#06b6d4]">
-                  <item.icon size={32} strokeWidth={1.5} />
+             <RevealSection key={i} delay={i * 150} className="h-full p-8 bg-[#18181b] rounded-xl border border-white/5 hover:border-[#06b6d4]/40 hover:shadow-[0_0_40px_-10px_rgba(6,182,212,0.3)] transition-all duration-700 group flex flex-col items-center text-center">
+                <div className="w-14 h-14 rounded-full bg-[#06b6d4]/10 flex items-center justify-center mb-6 text-[#06b6d4]">
+                  <item.icon size={28} strokeWidth={1.5} />
                 </div>
-                <h3 className="text-2xl font-bold mb-4 tracking-tight text-white">{item.title}</h3>
-                <p className="text-gray-400 leading-relaxed font-light">{item.text}</p>
+                <h3 className="text-xl font-bold mb-3 tracking-tight text-white">{item.title}</h3>
+                <p className="text-gray-400 leading-relaxed font-light text-base flex-grow">{item.text}</p>
              </RevealSection>
            ))}
         </div>

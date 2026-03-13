@@ -87,28 +87,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           </Reveal>
         </div>
         <Reveal className="reveal-d1">
-          <div className="overwhelm-cloud">
-            <div className="noise-items">
-              <div className="ni red" style={{ top: '8%', left: '4%' }}>New CRM Tool</div>
-              <div className="ni orange" style={{ top: '5%', left: '28%' }}>Payroll Software</div>
-              <div className="ni red" style={{ top: '12%', left: '55%' }}>Another Platform</div>
-              <div className="ni dim" style={{ top: '8%', right: '5%' }}>Health Benefits</div>
-              <div className="ni orange" style={{ top: '28%', left: '2%' }}>Team Onboarding</div>
-              <div className="ni red" style={{ top: '35%', right: '3%' }}>Brand Refresh?</div>
-              <div className="ni dim" style={{ top: '22%', left: '72%' }}>Email Hosting</div>
-              <div className="ni red" style={{ bottom: '25%', left: '3%' }}>CC Processing</div>
-              <div className="ni orange" style={{ bottom: '18%', left: '22%' }}>Which vendor?</div>
-              <div className="ni dim" style={{ bottom: '22%', right: '4%' }}>Will it work?</div>
-              <div className="ni red" style={{ bottom: '8%', left: '40%' }}>Another Subscription</div>
-              <div className="ni orange" style={{ bottom: '12%', right: '18%' }}>Onboarding Again?</div>
-              <div className="ni dim" style={{ top: '48%', left: '2%' }}>What's the ROI?</div>
-              <div className="ni red" style={{ top: '52%', right: '2%' }}>New AI Tool</div>
-            </div>
-            <div className="cloud-center">
-              <div className="cloud-center-label">You're here trying to run</div>
-              <div className="cloud-center-you">YOUR BUSINESS</div>
-              <div className="cloud-center-sub">while the noise never stops</div>
-            </div>
+          <div style={{ display: 'flex', justifyContent: 'center', padding: '40px 20px' }}>
+            <iframe 
+              src="https://share.descript.com/embed/YW6oMeyhLgD" 
+              width="640" 
+              height="360" 
+              frameBorder="0" 
+              allowFullScreen
+              style={{ maxWidth: '100%', borderRadius: '12px' }}
+            ></iframe>
           </div>
         </Reveal>
         <Reveal className="reveal-d2">
@@ -264,12 +251,33 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             style={{ width: '100%', maxWidth: 400, height: 220, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
           />
         </div>
-        <div className="section-tag">The First Step</div>
-        <h2>Let's build<br/>something <em>that actually works.</em></h2>
-        <p>No fluff. No vendor directory. Just an honest conversation about where you are, what's holding you back, and what it would look like to have a real partner in your corner from day one.</p>
-        <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', position: 'relative', zIndex: 1 }}>
-          <a href="mailto:michelle@creativesolutionspartners.com" className="btn-gold">Start the Conversation</a>
-          <a href="mailto:michelle@creativesolutionspartners.com?subject=Partnership%20Inquiry" className="btn-ghost">Become a Partner</a>
+        <div className="section-tag">THE FIRST STEP</div>
+        <h2 style={{ fontSize: 'clamp(2.5rem, 6vw, 4rem)', fontWeight: 400, lineHeight: 1.1, marginBottom: 24 }}>
+          Let's build<br/>
+          something<br/>
+          <em style={{ fontFamily: 'Georgia, serif', fontStyle: 'italic', color: '#c9a227' }}>that lasts.</em>
+        </h2>
+        <p style={{ maxWidth: 480, margin: '0 auto 32px', color: 'rgba(255,255,255,0.7)', fontSize: '1rem', lineHeight: 1.6 }}>
+          No fluff, no templates. A genuine partnership built around your goals, your business, and your definition of success.
+        </p>
+        <div style={{ display: 'flex', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
+          <a 
+            href="mailto:michelle@creativesolutionspartners.com" 
+            className="btn-gold"
+            style={{ 
+              backgroundColor: '#c9a227', 
+              color: '#0a0a0a', 
+              padding: '16px 32px', 
+              fontSize: '0.75rem', 
+              fontWeight: 600,
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
+              borderRadius: 2,
+              border: 'none'
+            }}
+          >
+            Begin the Conversation
+          </a>
         </div>
       </section>
 

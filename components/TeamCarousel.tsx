@@ -76,7 +76,6 @@ export const TeamCarousel: React.FC<TeamCarouselProps> = ({ members }) => {
 
         {/* Content Section */}
         <div className="w-full md:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative bg-[#0a0a0a]">
-          <div className="absolute top-0 left-0 w-1 h-full bg-brand-gold hidden md:block"></div>
           
           {/* Animated Text Container */}
           <div className="relative overflow-hidden min-h-[320px]">

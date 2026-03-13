@@ -13,6 +13,7 @@ import { LoginScreen } from './components/LoginScreen';
 import { TeamCarousel } from './components/TeamCarousel';
 import { TopNav } from './components/TopNav';
 import { HomePage } from './components/HomePage';
+import { ChatBot } from './components/ChatBot';
 import { ArrowLeft } from 'lucide-react';
 
 export default function App() {
@@ -131,6 +132,9 @@ export default function App() {
           </div>
         )}
       </div>
+
+      {/* Chat Bot */}
+      <ChatBot />
     </div>
   );
 }
