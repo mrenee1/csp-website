@@ -423,7 +423,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="eco-join">
               <h4>Your solution belongs here.</h4>
               <p>We're always expanding. If you serve business owners and share our standard of excellence — let's talk partnership.</p>
-              <a href="mailto:partners@csp.com?subject=Partnership%20Inquiry">Apply to Partner →</a>
+              <a href="mailto:michelle@creativesolutionspartners.com?subject=Partnership%20Inquiry">Apply to Partner →</a>
             </div>
           </Reveal>
         </div>
@@ -531,8 +531,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <h2>Let's build<br/>something <em>that actually works.</em></h2>
         <p>No fluff. No vendor directory. Just an honest conversation about where you are, what's holding you back, and what it would look like to have a real partner in your corner from day one.</p>
         <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', position: 'relative', zIndex: 1 }}>
-          <a href="mailto:hello@creativesolutionspartners.com" className="btn-gold">Start the Conversation</a>
-          <a href="mailto:partners@csp.com?subject=Partnership%20Inquiry" className="btn-ghost">Become a Partner</a>
+          <a href="mailto:michelle@creativesolutionspartners.com" className="btn-gold">Start the Conversation</a>
+          <a href="mailto:michelle@creativesolutionspartners.com?subject=Partnership%20Inquiry" className="btn-ghost">Become a Partner</a>
         </div>
       </section>
 
@@ -557,7 +557,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="footer-col">
           <h4>Company</h4>
           <button onClick={() => onNavigate('about')}>About CSP</button>
-          <a href="mailto:partners@csp.com?subject=Partnership%20Inquiry">Become a Partner</a>
+          <a href="mailto:michelle@creativesolutionspartners.com?subject=Partnership%20Inquiry">Become a Partner</a>
           <button onClick={() => onNavigate('blog')}>Insights Blog</button>
           <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Contact Us</button>
         </div>

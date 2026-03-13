@@ -76,7 +76,7 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate }) => {
               <button className="nav-dd-item" onClick={() => scrollOrNav('ecosystem')}>Network Overview</button>
               <button className="nav-dd-item" onClick={() => nav('wealthwave')}>WealthWave Partners</button>
               <div className="nav-dd-divider" />
-              <a className="nav-dd-item" href="mailto:partners@csp.com?subject=Partnership%20Inquiry">Become a Partner →</a>
+              <a className="nav-dd-item" href="mailto:michelle@creativesolutionspartners.com?subject=Partnership%20Inquiry">Become a Partner →</a>
             </div>
           </div>
 

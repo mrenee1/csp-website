@@ -101,7 +101,7 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
     return () => clearInterval(timer);
   }, []);
 
-  const LEAD_EMAIL = 'partners@csp.com';
+  const LEAD_EMAIL = 'michelle@creativesolutionspartners.com';
 
   return (
     <div className="bg-[#0a0a0a] relative w-full max-w-[100vw] overflow-x-hidden selection:bg-[#2DD4BF]/30">

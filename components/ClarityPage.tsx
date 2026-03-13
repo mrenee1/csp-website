@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, X, ShieldCheck, Calculator, Layers, ChevronRight, Scale, Users, FileSearch, ArrowRight, Lock, FileText, Database, BrainCircuit, LineChart, AlertTriangle } from 'lucide-react';
 import { PageName } from '../types';
 
-const LEAD_EMAIL = 'partners@csp.com';
+const LEAD_EMAIL = 'michelle@creativesolutionspartners.com';
 
 const HERO_FEATURES = [
   {

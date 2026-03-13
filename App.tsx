@@ -9,6 +9,7 @@ import { ChampionHealthPage } from './components/ChampionHealthPage';
 import { TeamCarousel } from './components/TeamCarousel';
 import { TopNav } from './components/TopNav';
 import { HomePage } from './components/HomePage';
+import { Newsletter } from './components/Newsletter';
 import { ArrowLeft } from 'lucide-react';
 
 export default function App() {
@@ -22,7 +23,7 @@ export default function App() {
 
   const navigateTo = (page: PageName) => {
     if (page === 'bizboost') {
-      window.location.href = 'mailto:partners@csp.com?subject=Technology%20Services%20Consultation%20(Biz%20Boost)';
+      window.location.href = 'mailto:michelle@creativesolutionspartners.com?subject=Technology%20Services%20Consultation%20(Biz%20Boost)';
       return;
     }
     setActivePage(page);
@@ -46,6 +47,7 @@ export default function App() {
   return (
     <div className="min-h-screen" style={{ background: 'var(--bg, #08091a)' }}>
       <TopNav activePage={activePage} onNavigate={navigateTo} />
+      <Newsletter />
 
       <div style={{ paddingTop: 60 }}>
         {activePage === 'home' && (
