@@ -182,6 +182,35 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         ))}
       </section>
 
+      {/* ════════ IN THE FIELD ════════ */}
+      <section className="field">
+        <div className="field-inner">
+          <div className="field-copy">
+            <Reveal>
+              <div className="section-tag" style={{ justifyContent: 'flex-start' }}>In The Field</div>
+              <h2>We don't just find solutions.<br/><em>We solve them with you.</em></h2>
+              <p>Most companies hand you a recommendation and wish you luck. That's not our model. CSP puts expert solution advisors alongside business owners — in their operations, understanding their specific context, and staying until the problem is actually solved.</p>
+              <blockquote>"Our product is partnership. That means we show up."</blockquote>
+            </Reveal>
+          </div>
+          <Reveal className="reveal-d2">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+              <img 
+                src="/images/connection.jpg" 
+                alt="Human Connection" 
+                style={{ width: '100%', maxWidth: 500, height: 250, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
+              />
+              <div className="field-stats">
+                <div className="fs-card"><span className="fs-num">1</span><span className="fs-label">Point of contact for every service in your business</span></div>
+                <div className="fs-card"><span className="fs-num">∞</span><span className="fs-label">Growing ecosystem — new solutions added monthly</span></div>
+                <div className="fs-card"><span className="fs-num">0</span><span className="fs-label">Vendors to manage on your own</span></div>
+                <div className="fs-card"><span className="fs-num">3</span><span className="fs-label">Core pillars: Health, Wealth, Technology</span></div>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* ════════ ROI BAND ════════ */}
       <div className="roi-band">
         <div className="roi-inner">
@@ -225,35 +254,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           </Reveal>
         </div>
       </div>
-
-      {/* ════════ IN THE FIELD ════════ */}
-      <section className="field">
-        <div className="field-inner">
-          <div className="field-copy">
-            <Reveal>
-              <div className="section-tag" style={{ justifyContent: 'flex-start' }}>In The Field</div>
-              <h2>We don't just find solutions.<br/><em>We solve them with you.</em></h2>
-              <p>Most companies hand you a recommendation and wish you luck. That's not our model. CSP puts expert solution advisors alongside business owners — in their operations, understanding their specific context, and staying until the problem is actually solved.</p>
-              <blockquote>"Our product is partnership. That means we show up."</blockquote>
-            </Reveal>
-          </div>
-          <Reveal className="reveal-d2">
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-              <img 
-                src="/images/connection.jpg" 
-                alt="Human Connection" 
-                style={{ width: '100%', maxWidth: 500, height: 250, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
-              />
-              <div className="field-stats">
-                <div className="fs-card"><span className="fs-num">1</span><span className="fs-label">Point of contact for every service in your business</span></div>
-                <div className="fs-card"><span className="fs-num">∞</span><span className="fs-label">Growing ecosystem — new solutions added monthly</span></div>
-                <div className="fs-card"><span className="fs-num">0</span><span className="fs-label">Vendors to manage on your own</span></div>
-                <div className="fs-card"><span className="fs-num">3</span><span className="fs-label">Core pillars: Health, Wealth, Technology</span></div>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
 
       {/* ════════ FINAL CTA ════════ */}
       <section id="contact" className="final-cta">
