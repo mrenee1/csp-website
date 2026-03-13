@@ -8,14 +8,8 @@ interface ImpactPaymentsPageProps {
 }
 
 export const ImpactPaymentsPage: React.FC<ImpactPaymentsPageProps> = ({ onBack, onNavigate }) => {
-  console.log('ImpactPaymentsPage rendered'); // Debug log
-  
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
-      {/* Debug indicator */}
-      <div style={{ position: 'fixed', top: 0, left: 0, background: 'red', color: 'white', padding: '10px', zIndex: 9999 }}>
-        IMPACT PAYMENTS PAGE LOADED
-      </div>
       {/* Header */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>

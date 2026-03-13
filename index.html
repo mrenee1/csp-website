@@ -375,6 +375,65 @@
       .mobile-group-label{color:var(--gold)!important;font-size:20px!important;border-bottom:none!important;padding-bottom:4px!important;cursor:default!important}
       .mobile-group-item{padding-left:24px!important;font-size:22px!important}
 
+      /* THEME TOGGLE */
+      .theme-toggle-btn{background:none;border:none;color:var(--text);cursor:pointer;padding:8px;border-radius:50%;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+      .theme-toggle-btn:hover{background:var(--border);color:var(--gold)}
+      .mobile-theme-toggle{display:flex;align-items:center;gap:12px;font-family:'Bebas Neue',sans-serif;font-size:22px!important;letter-spacing:0.08em;color:var(--text);background:none;border:none;cursor:pointer;padding:14px 0!important;text-align:left;border-bottom:1px solid var(--border);transition:color 0.2s;width:100%}
+      .mobile-theme-toggle:hover{color:var(--gold)}
+
+      /* LIGHT THEME VARIABLES - White, Dark Purple, Navy, Gold */
+      [data-theme="light"]{--bg:#ffffff;--text:#1a1a2e;--muted:#4a4a6a;--border:#e0e0e8;--gold:#C9A84C}
+      [data-theme="light"] body{background:#ffffff!important;color:#1a1a2e!important}
+      [data-theme="light"] .csp-nav{background:#ffffff!important;border-bottom:1px solid #e0e0e8!important}
+      [data-theme="light"] .nav-csp{color:#1a1a2e!important}
+      [data-theme="light"] .nav-full span{color:#2d2d44!important}
+      [data-theme="light"] .nav-dropdown-trigger{color:#1a1a2e!important}
+      [data-theme="light"] .nav-links button{color:#1a1a2e!important}
+      [data-theme="light"] .nav-cta-btn{background:#C9A84C!important;color:#1a1a2e!important}
+      [data-theme="light"] .nav-cta-btn:hover{background:#d4b76a!important}
+      [data-theme="light"] .hero-new{background:#ffffff!important}
+      [data-theme="light"] .hero-headline{color:#1a1a2e!important}
+      [data-theme="light"] .hero-sub{color:#4a4a6a!important}
+      [data-theme="light"] .hp-footer{background:#ffffff!important;border-top:1px solid #e0e0e8!important}
+      [data-theme="light"] .hp-footer p{color:#4a4a6a!important}
+      [data-theme="light"] .footer-col h4{color:#C9A84C!important}
+      [data-theme="light"] .footer-col button{color:#4a4a6a!important}
+      [data-theme="light"] .footer-col button:hover{color:#C9A84C!important}
+      [data-theme="light"] .footer-bottom span{color:#6a6a8a!important}
+      [data-theme="light"] .mobile-menu-overlay{background:#ffffff!important}
+      [data-theme="light"] .mobile-menu-overlay button{color:#1a1a2e!important}
+      [data-theme="light"] .mobile-menu-overlay button:hover{color:#C9A84C!important}
+      [data-theme="light"] .mobile-group-label{color:#C9A84C!important}
+      [data-theme="light"] .theme-toggle-btn{color:#1a1a2e!important}
+      [data-theme="light"] .theme-toggle-btn:hover{background:#f0f0f5!important;color:#C9A84C!important}
+      [data-theme="light"] .mobile-theme-toggle{color:#1a1a2e!important}
+      [data-theme="light"] .mobile-theme-toggle:hover{color:#C9A84C!important}
+      [data-theme="light"] h1,[data-theme="light"] h2,[data-theme="light"] h3,[data-theme="light"] h4{color:#1a1a2e!important}
+      [data-theme="light"] p,[data-theme="light"] span:not(.nav-csp):not(.nav-full span){color:#4a4a6a!important}
+      [data-theme="light"] .text-white{color:#1a1a2e!important}
+      [data-theme="light"] .text-gray-300,[data-theme="light"] .text-gray-400,[data-theme="light"] .text-gray-500{color:#4a4a6a!important}
+      [data-theme="light"] .bg-\[\#0a0a0a\],[data-theme="light"] .bg-\[\#08091a\],[data-theme="light"] .bg-\[\#18181b\],[data-theme="light"] .bg-\[\#111827\]{background:#ffffff!important}
+      [data-theme="light"] .border-white\/10,[data-theme="light"] .border-white\/5{border-color:#e0e0e8!important}
+      [data-theme="light"] .chaos{background:#f8f8fa!important}
+      [data-theme="light"] .pillars{background:#ffffff!important}
+      [data-theme="light"] .tools{background:#f8f8fa!important}
+      [data-theme="light"] .ecosystem{background:#ffffff!important}
+      [data-theme="light"] .ww-band{background:#f8f8fa!important}
+      [data-theme="light"] .hp-blog{background:#ffffff!important}
+      [data-theme="light"] .field{background:#f8f8fa!important}
+      [data-theme="light"] .final-cta{background:#ffffff!important}
+      [data-theme="light"] .overwhelm-cloud{background:#f0f0f5!important;border-color:#e0e0e8!important}
+      [data-theme="light"] .overwhelm-cloud h3,[data-theme="light"] .overwhelm-cloud p{color:#1a1a2e!important}
+      [data-theme="light"] .chaos-costs > div{background:#ffffff!important;border-color:#e0e0e8!important;color:#4a4a6a!important}
+      [data-theme="light"] .solution-card{background:#ffffff!important;border-color:#e0e0e8!important}
+      [data-theme="light"] .solution-card h3,[data-theme="light"] .solution-card p{color:#1a1a2e!important}
+      [data-theme="light"] .eco-card{background:#ffffff!important;border-color:#e0e0e8!important}
+      [data-theme="light"] .blog-card{background:#ffffff!important;border-color:#e0e0e8!important}
+      [data-theme="light"] .field-card{background:#ffffff!important;border-color:#e0e0e8!important}
+      [data-theme="light"] .btn-gold{background:#C9A84C!important;color:#1a1a2e!important}
+      [data-theme="light"] .btn-ghost{border-color:#1a1a2e!important;color:#1a1a2e!important}
+      [data-theme="light"] .btn-ghost:hover{background:#1a1a2e!important;color:#ffffff!important}
+
       @media(max-width:1100px){
         .pillars-grid{grid-template-columns:1fr}
         .eco-grid{grid-template-columns:repeat(2,1fr)}

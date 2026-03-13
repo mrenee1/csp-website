@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { PageName } from '../types';
+import { useTheme } from './ThemeContext';
+import { Sun, Moon } from 'lucide-react';
 
 interface TopNavProps {
   activePage: PageName;
@@ -10,6 +12,7 @@ interface TopNavProps {
 
 export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthenticated = false, onLogout }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const scrollOrNav = (sectionId: string) => {
     if (activePage === 'home') {
@@ -80,6 +83,16 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
 
           <button onClick={() => window.open('https://csp-insights.replit.app', '_blank')}>Insights</button>
           <button onClick={() => onNavigate('about')}>About</button>
+          
+          {/* Theme Toggle */}
+          <button 
+            onClick={toggleTheme}
+            className="theme-toggle-btn"
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+          
           {isAuthenticated ? (
             <button className="nav-cta-btn" onClick={onLogout}>Logout</button>
           ) : (
@@ -118,6 +131,16 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
 
           <button onClick={() => { window.open('https://csp-insights.replit.app', '_blank'); setMobileOpen(false); }}>Insights</button>
           <button onClick={() => { onNavigate('about'); setMobileOpen(false); }}>About</button>
+          
+          {/* Mobile Theme Toggle */}
+          <button 
+            onClick={() => { toggleTheme(); }}
+            className="mobile-theme-toggle"
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+            <span>{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</span>
+          </button>
         </div>
       )}
     </>
