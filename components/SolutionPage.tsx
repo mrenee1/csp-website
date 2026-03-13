@@ -79,10 +79,10 @@ export const SolutionPage: React.FC<{ data: ServiceData; onBack: () => void; onN
       {/* Content Section - Dark layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
         <div className="p-12 lg:p-24 bg-[#0f0f0f]">
-          <h3 className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-6">The Challenge</h3>
-          <p className="text-xl text-gray-300 leading-relaxed mb-8">{data.description}</p>
+          <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-6">The Challenge</h3>
+          <p className="text-xl text-white leading-relaxed mb-8">{data.description}</p>
           <div className={`h-1 w-20 mb-8 ${data.id === 'health' ? 'bg-[#2DD4BF]' : data.id === 'wealth' ? 'bg-[#C5A059]' : 'bg-[#5D2E8E]'}`}></div>
-          <p className="text-gray-400 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed">
             In today's volatile market, siloed approaches to {data.title.toLowerCase()} create vulnerability. 
             We integrate expert insights with actionable strategy to deliver results that compound over time.
           </p>
@@ -104,7 +104,7 @@ export const SolutionPage: React.FC<{ data: ServiceData; onBack: () => void; onN
                          <h4 className={`text-xl font-serif font-bold text-white transition-colors ${titleHoverClass}`}>{platform.title}</h4>
                          <ArrowRight size={18} className={`transform group-hover:translate-x-1 transition-transform`} style={{ color: accentColor }} />
                        </div>
-                       <p className="text-gray-400 text-sm">{platform.description}</p>
+                       <p className="text-white text-base leading-relaxed">{platform.description}</p>
                      </div>
                    );
                  })}

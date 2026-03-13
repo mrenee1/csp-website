@@ -331,13 +331,13 @@ export const ClarityPage: React.FC<{ onBack: () => void; onNavigate: (page: Page
                  <table className="w-full text-left border-collapse min-w-[900px]">
                     <thead>
                        <tr className="bg-[#0a0a0a] text-white">
-                          <th className="p-8 font-bold text-xs uppercase tracking-[0.2em] w-1/4 sticky left-0 bg-[#0a0a0a] z-20">Core Capability</th>
-                          <th className="p-8 font-bold text-[#06b6d4] text-xl w-1/4 bg-[#18181b] border-b-4 border-[#06b6d4]">Clarity Infrastructure</th>
-                          <th className="p-8 font-medium text-gray-500 w-1/4 uppercase tracking-widest text-[10px]">Incentive Software</th>
-                          <th className="p-8 font-medium text-gray-500 w-1/4 uppercase tracking-widest text-[10px]">Spreadsheets</th>
+                          <th className="p-6 font-bold text-sm uppercase tracking-[0.15em] w-1/4 sticky left-0 bg-[#0a0a0a] z-20">Core Capability</th>
+                          <th className="p-6 font-bold text-[#06b6d4] text-lg w-1/4 bg-[#18181b] border-b-4 border-[#06b6d4]">Clarity Infrastructure</th>
+                          <th className="p-6 font-medium text-gray-400 w-1/4 uppercase tracking-widest text-xs">Incentive Software</th>
+                          <th className="p-6 font-medium text-gray-400 w-1/4 uppercase tracking-widest text-xs">Spreadsheets</th>
                        </tr>
                     </thead>
-                    <tbody className="divide-y divide-white/5 text-sm">
+                    <tbody className="divide-y divide-white/5 text-base">
                        {[
                           { feature: 'Math Engine', clarity: 'Decimal-Safe (Banking Std)', soft: 'Floating Point (Approx)', spread: 'Formula Based (Fragile)' },
                           { feature: 'Data State', clarity: 'Immutable / Versioned', soft: 'Overwritable', spread: 'Manual Saves' },
@@ -346,10 +346,10 @@ export const ClarityPage: React.FC<{ onBack: () => void; onNavigate: (page: Page
                           { feature: 'Dispute Res', clarity: 'Traceable Resolution', soft: 'Ticket Based', spread: 'Email Chains' },
                        ].map((row, i) => (
                           <tr key={i} className="hover:bg-white/5 transition-colors group">
-                             <td className="p-8 font-bold text-white border-r border-white/5 sticky left-0 bg-[#18181b] z-10">{row.feature}</td>
-                             <td className="p-8 bg-[#06b6d4]/5 border-r border-white/5 text-[#06b6d4] font-semibold">{row.clarity}</td>
-                             <td className="p-8 text-gray-500 border-r border-white/5 italic font-light">{row.soft}</td>
-                             <td className="p-8 text-gray-500 font-light italic">{row.spread}</td>
+                             <td className="p-6 font-bold text-white border-r border-white/5 sticky left-0 bg-[#18181b] z-10">{row.feature}</td>
+                             <td className="p-6 bg-[#06b6d4]/5 border-r border-white/5 text-[#06b6d4] font-semibold">{row.clarity}</td>
+                             <td className="p-6 text-gray-400 border-r border-white/5 italic">{row.soft}</td>
+                             <td className="p-6 text-gray-400 italic">{row.spread}</td>
                           </tr>
                        ))}
                     </tbody>
