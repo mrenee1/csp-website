@@ -32,10 +32,9 @@ export default function App() {
   };
 
   const handleLogin = (credentials: { email: string; password: string }) => {
-    // In a real app, this would call an authentication API
     setIsAuthenticated(true);
     setUser({ email: credentials.email });
-    setActivePage('partner-application'); // Redirect to partner portal/dashboard
+    setActivePage('partner-application');
   };
 
   const handleLogout = () => {
@@ -46,9 +45,9 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="fixed inset-0 bg-brand-dark z-50 flex items-center justify-center">
-        <div className="animate-fade-in flex flex-col items-center">
-          <Logo variant="light" className="mb-8 scale-150" />
+      <div className="fixed inset-0 flex items-center justify-center bg-[#08091a] z-50">
+        <div className="text-center">
+          <Logo />
           <div className="h-[2px] w-40 bg-white/10 mt-6 overflow-hidden rounded-full">
             <div className="h-full w-1/2 bg-brand-gold animate-[shimmer_1.5s_infinite]" />
           </div>
@@ -74,7 +73,7 @@ export default function App() {
 
         {activePage === 'clarity' && <ClarityPage onBack={() => navigateTo('tech')} onNavigate={navigateTo} />}
         {activePage === 'wealthwave' && <WealthWavePage onBack={() => navigateTo('finance')} onNavigate={navigateTo} />}
-        {activePage === 'championhealth' && <ChampionHealthPage onBack={() => navigateTo('health')} onNavigate={navigateTo} />}
+        {activePage === 'championhealth' && <ChampionHealthPage onBack={() => navigateTo('home')} onNavigate={navigateTo} />}
         {activePage === 'creativepayments' && <ImpactPaymentsPage onBack={() => navigateTo('finance')} onNavigate={navigateTo} />}
         {activePage === 'bizboost' && <CreativeWebPage onBack={() => navigateTo('tech')} onNavigate={navigateTo} />}
 
@@ -107,27 +106,26 @@ export default function App() {
             </button>
             <h1 className="text-5xl font-serif mb-8 text-white">About Us</h1>
             <div className="animate-fade-in">
-                {/* Eyebrow heading */}
-                <div className="mb-4">
-                  <span className="text-brand-gold text-sm font-bold uppercase tracking-widest">About Us</span>
-                </div>
-                
-                {/* Main heading */}
-                <h2 className="text-4xl md:text-5xl font-serif text-white mb-8 leading-tight">
-                  Leadership rooted in strategy, service, and long-term vision
-                </h2>
-                
-                {/* Intro paragraph */}
-                <div className="max-w-4xl mb-16">
-                  <p className="text-xl text-gray-300 leading-relaxed mb-6">
-                    Creative Solutions Partners brings together leadership across business strategy, operations, and financial education to create meaningful solutions for the people, partners, and organizations we serve.
-                  </p>
-                </div>
-                
-                {/* Leadership Team Section */}
-                <div className="mb-8">
-                  <TeamCarousel members={TEAM_MEMBERS} />
-                </div>
+              {/* Eyebrow heading */}
+              <div className="mb-4">
+                <span className="text-brand-gold text-sm font-bold uppercase tracking-widest">About Us</span>
+              </div>
+              
+              {/* Main heading */}
+              <h2 className="text-4xl md:text-5xl font-serif text-white mb-8 leading-tight">
+                Leadership rooted in strategy, service, and long-term vision
+              </h2>
+              
+              {/* Intro paragraph */}
+              <div className="max-w-4xl mb-16">
+                <p className="text-xl text-gray-300 leading-relaxed mb-6">
+                  Creative Solutions Partners brings together leadership across business strategy, operations, and financial education to create meaningful solutions for the people, partners, and organizations we serve.
+                </p>
+              </div>
+              
+              {/* Leadership Team Section */}
+              <div className="mb-8">
+                <TeamCarousel members={TEAM_MEMBERS} />
               </div>
             </div>
           </div>

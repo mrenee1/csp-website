@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowLeft, Palette, Code, Smartphone, Globe, Zap, Shield, Users } from 'lucide-react';
 import { PageName } from '../types';
+import { Galaxy } from './Galaxy';
 
 interface CreativeWebPageProps {
   onBack: () => void;
@@ -12,30 +13,37 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       {/* Header */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-rose-500/20"></div>
+        <div className="absolute inset-0">
+          <Galaxy
+            starSpeed={0.2}
+            density={0.6}
+            hueShift={140}
+            speed={0.3}
+            glowIntensity={0.1}
+            saturation={0}
+            mouseRepulsion
+            repulsionStrength={2}
+            twinkleIntensity={0.3}
+            rotationSpeed={0}
+            transparent
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-950/60 via-purple-900/50 to-pink-950/60"></div>
         <div className="relative py-24 px-6 md:px-12 lg:px-24">
           <button 
             onClick={onBack}
             className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-12 text-sm uppercase tracking-widest"
           >
-            <ArrowLeft size={16} /> Back to Technology
+            <ArrowLeft size={16} /> Back Home
           </button>
           
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 bg-pink-500/20 text-pink-400 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-8 border border-pink-500/30">
-              Web Solutions
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-serif font-medium leading-tight mb-8">
-              Creative <span className="text-pink-400">Web</span>
+            <h1 className="text-6xl md:text-8xl font-serif font-bold text-[#C9A84C] mb-8 drop-shadow-[0_0_12px_rgba(201,168,76,0.7)]">
+              Creative Web
             </h1>
             
             <p className="text-2xl md:text-3xl text-gray-300 font-light leading-relaxed max-w-3xl">
-              Professional Websites, Branding & Digital Growth Systems
-            </p>
-            
-            <p className="text-lg text-gray-400 mt-8 max-w-3xl leading-relaxed">
-              Transform your digital presence with custom websites, branding solutions, and growth-focused web systems designed for modern businesses. We create digital experiences that convert visitors into customers and elevate your brand.
+              Websites, branding, and digital marketing that actually move the needle. We don't do average. Every goal, every word, every campaign is built to convert.
             </p>
           </div>
         </div>
@@ -46,8 +54,8 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
         {/* Core Services Section */}
         <section className="mb-32">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-serif text-white mb-16 text-center">
-              Our Web Solutions
+            <h2 className="text-5xl md:text-7xl font-serif font-medium text-center mb-16">
+              <span className="text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">BUILD.</span> <span className="text-[#00FFCC] drop-shadow-[0_0_8px_rgba(0,255,204,0.5)]">BRAND.</span> <span className="text-[#FF3399] drop-shadow-[0_0_8px_rgba(255,51,153,0.5)]">DOMINATE.</span>
             </h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -83,8 +91,8 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
                   description: "Ongoing security updates, backups, and performance monitoring to keep your site running smoothly."
                 }
               ].map((service, index) => (
-                <div key={index} className="bg-[#18181b] p-8 rounded-xl border border-white/10 hover:border-purple-500/40 transition-all duration-500 group">
-                  <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mb-6 text-purple-400 group-hover:bg-purple-500/20 transition-colors">
+                <div key={index} className="bg-[#18181b] p-8 rounded-xl border border-white/10 hover:border-[#FF2D92]/40 transition-all duration-500 group">
+                  <div className="w-16 h-16 bg-[#FF2D92]/10 rounded-full flex items-center justify-center mb-6 text-[#FF2D92] group-hover:bg-[#FF2D92]/20 transition-colors">
                     <service.icon size={32} />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
@@ -126,7 +134,7 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
                 }
               ].map((step, index) => (
                 <div key={index} className="flex gap-8 items-start group">
-                  <div className="shrink-0 w-16 h-16 rounded-full bg-purple-500/10 border-2 border-purple-500/30 flex items-center justify-center text-purple-400 font-bold text-xl group-hover:bg-purple-500/20 transition-colors">
+                  <div className="shrink-0 w-16 h-16 rounded-full bg-[#FF2D92]/10 border-2 border-[#FF2D92]/30 flex items-center justify-center text-[#FF2D92] font-bold text-xl group-hover:bg-[#FF2D92]/20 transition-colors">
                     {step.step}
                   </div>
                   <div>
@@ -169,8 +177,8 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
                   description: "Websites that perfectly reflect your brand identity and business values."
                 }
               ].map((benefit, index) => (
-                <div key={index} className="bg-[#18181b] p-8 rounded-xl border border-white/10 hover:border-purple-500/40 transition-all duration-500">
-                  <div className="w-12 h-12 bg-purple-500/10 rounded-full flex items-center justify-center mb-6 text-purple-400 mx-auto">
+                <div key={index} className="bg-[#18181b] p-8 rounded-xl border border-white/10 hover:border-[#FF2D92]/40 transition-all duration-500">
+                  <div className="w-12 h-12 bg-[#FF2D92]/10 rounded-full flex items-center justify-center mb-6 text-[#FF2D92] mx-auto">
                     <benefit.icon size={24} />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
@@ -183,7 +191,7 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
 
         {/* CTA Section */}
         <section>
-          <div className="max-w-3xl mx-auto text-center bg-gradient-to-br from-purple-900/20 to-pink-900/20 p-16 rounded-2xl border border-purple-500/20">
+          <div className="max-w-3xl mx-auto text-center bg-gradient-to-br from-[#FF2D92]/20 to-[#00AABF]/20 p-16 rounded-2xl border border-[#FF2D92]/20">
             <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">
               Ready to Elevate Your Digital Presence?
             </h2>
@@ -194,13 +202,13 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
               onClick={() => {
                 window.location.href = 'mailto:michelle@creativesolutionspartners.com?subject=Creative%20Web%20Consultation';
               }}
-              className="bg-purple-500 text-white px-12 py-5 font-bold hover:bg-purple-600 transition-all duration-500 rounded-lg text-lg uppercase tracking-widest shadow-lg hover:shadow-purple-500/25"
+              className="bg-[#FF2D92] text-white px-12 py-5 font-bold hover:bg-[#FF2D92]/80 transition-all duration-500 rounded-lg text-lg uppercase tracking-widest shadow-lg hover:shadow-[#FF2D92]/25 border-2 border-[#FF2D92]"
             >
               Start Your Project
             </button>
           </div>
           <div className="mt-16 text-center">
-            <div className="inline-flex items-center gap-2 bg-pink-500/10 text-pink-300 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest border border-pink-500/20">
+            <div className="inline-flex items-center gap-2 bg-[#FF2D92]/10 text-[#FF2D92] px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest border border-[#FF2D92]/20">
               <span>⚡</span>
               Powered by Biz Boost Agency
             </div>

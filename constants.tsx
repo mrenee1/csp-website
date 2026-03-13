@@ -138,7 +138,7 @@ export const SERVICES: Record<string, ServiceData> = {
     id: 'finance',
     title: 'Finance Solutions',
     subtitle: 'WealthWave & Impact Payments',
-    description: 'Comprehensive financial solutions including education, literacy programs, and modern payment infrastructure designed to strengthen financial futures for individuals and organizations.',
+    description: 'Modern financial solutions designed to strengthen financial futures through education, literacy programs, and cutting-edge payment infrastructure.',
     icon: Coins,
     color: 'bg-brand-gold',
     textColor: 'text-white',

@@ -8,7 +8,7 @@ const LEAD_EMAIL = 'michelle@creativesolutionspartners.com';
 const getPlatformCardStyle = (platformId: string): { cardClasses: string; accentColor: string } => {
   switch (platformId) {
     case 'bizboost':
-      return { cardClasses: 'border-white/5 hover:border-[#ff69b4]/40 hover:shadow-[0_0_40px_-10px_rgba(255,105,180,0.4)]', accentColor: '#ff69b4' };
+      return { cardClasses: 'border-white/5 hover:border-[#00ffff]/40 hover:shadow-[0_0_40px_-10px_rgba(0,255,255,0.4)]', accentColor: '#00ffff' };
     case 'clarity':
       return { cardClasses: 'border-white/5 hover:border-[#06b6d4]/40 hover:shadow-[0_0_40px_-10px_rgba(6,182,212,0.4)]', accentColor: '#06b6d4' };
     case 'championhealth':
@@ -25,21 +25,21 @@ const getPlatformCardStyle = (platformId: string): { cardClasses: string; accent
 const getFeatureCardGlow = (dataId: string): string => {
   if (dataId === 'health') return 'border-white/5 hover:border-[#2DD4BF]/40 hover:shadow-[0_0_40px_-10px_rgba(45,212,191,0.35)]';
   if (dataId === 'wealth') return 'border-white/5 hover:border-[#C5A059]/40 hover:shadow-[0_0_40px_-10px_rgba(197,160,89,0.35)]';
-  if (dataId === 'tech') return 'border-white/5 hover:border-[#ff69b4]/40 hover:shadow-[0_0_40px_-10px_rgba(255,105,180,0.35)]';
+  if (dataId === 'tech') return 'border-white/5 hover:border-[#00ffff]/40 hover:shadow-[0_0_40px_-10px_rgba(0,255,255,0.35)]';
   return 'border-white/5 hover:border-white/20';
 };
 
 const getAccentDot = (dataId: string): string => {
   if (dataId === 'health') return 'bg-[#2DD4BF]';
   if (dataId === 'wealth') return 'bg-[#C5A059]';
-  if (dataId === 'tech') return 'bg-[#ff69b4]';
+  if (dataId === 'tech') return 'bg-[#00ffff]';
   return 'bg-brand-gold';
 };
 
 const getHeaderGlow = (dataId: string): string => {
   if (dataId === 'health') return '0 20px 60px -15px rgba(45,212,191,0.3)';
   if (dataId === 'wealth') return '0 20px 60px -15px rgba(197,160,89,0.3)';
-  if (dataId === 'tech') return '0 20px 60px -15px rgba(255,105,180,0.3)';
+  if (dataId === 'tech') return '0 20px 60px -15px rgba(0,255,255,0.3)';
   return 'none';
 };
 
@@ -93,7 +93,7 @@ export const SolutionPage: React.FC<{ data: ServiceData; onBack: () => void; onN
                <div className="space-y-4">
                  {data.featuredPlatforms.map((platform) => {
                    const { cardClasses, accentColor } = getPlatformCardStyle(platform.id);
-                   const titleHoverClass = platform.id === 'bizboost' ? 'group-hover:text-[#C8377C]' : platform.id === 'clarity' ? 'group-hover:text-[#06b6d4]' : platform.id === 'championhealth' ? 'group-hover:text-[#2DD4BF]' : platform.id === 'creativepayments' ? 'group-hover:text-[#8b5cf6]' : 'group-hover:text-[#C5A059]';
+                   const titleHoverClass = platform.id === 'bizboost' ? 'group-hover:text-[#00ffff]' : platform.id === 'clarity' ? 'group-hover:text-[#06b6d4]' : platform.id === 'championhealth' ? 'group-hover:text-[#2DD4BF]' : platform.id === 'creativepayments' ? 'group-hover:text-[#8b5cf6]' : 'group-hover:text-[#C5A059]';
                    return (
                      <div
                        key={platform.id}
