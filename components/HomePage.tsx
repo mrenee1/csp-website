@@ -226,9 +226,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         </div>
       </div>
 
-      {/* ════════ TOOL DEMOS ════════ */}
-
-
       {/* ════════ ECOSYSTEM ════════ */}
       <section id="ecosystem" className="ecosystem">
         <div className="eco-header">
@@ -255,31 +252,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           </Reveal>
         </div>
       </section>
-
-      {/* ════════ WEALTHWAVE ════════ */}
-      <div className="ww-band">
-        <div className="ww-inner">
-          <div className="ww-copy">
-            <Reveal>
-              <div className="section-tag" style={{ justifyContent: 'flex-start' }}>Featured Solution</div>
-              <h2>Because we don't just care<br/>about your business.<br/><em>We care about you.</em></h2>
-              <p>Financial stress is one of the biggest invisible drains on business owners and their teams. Through WealthWave, we bring financial literacy and wealth-building tools to your employees — and to you.</p>
-              <p>Understanding how money actually works changes how you make decisions, how you retain talent, and how you build toward real freedom.</p>
-              <button onClick={() => onNavigate('wealthwave')}>Learn about WealthWave →</button>
-            </Reveal>
-          </div>
-          <Reveal className="reveal-d2">
-            <div className="ww-card">
-              <div className="ww-logo">WealthWave</div>
-              <div className="ww-sub">A CSP Platform Solution</div>
-              <div className="ww-pill">Wealth Pillar</div>
-              <div className="ww-desc"><strong style={{ color: 'var(--text)' }}>Financial Literacy &amp; Wealth Building</strong><br/><br/>Financial education for business owners and their teams — built around real-world wealth strategies that actually get implemented.</div>
-            </div>
-          </Reveal>
-        </div>
-      </div>
-
-
 
       {/* ════════ IN THE FIELD ════════ */}
       <section className="field">
