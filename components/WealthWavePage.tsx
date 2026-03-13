@@ -38,7 +38,7 @@ export const WealthWavePage: React.FC<WealthWavePageProps> = ({ onBack, onNaviga
                 <a href="mailto:michelle@creativesolutionspartners.com?subject=WealthWave%20Book%20Request" className="bg-[#C5A059] text-[#0a0a0a] px-8 py-4 font-bold hover:bg-[#d4b36a] transition-colors w-full md:w-auto text-center rounded-sm shadow-[0_0_40px_-10px_rgba(197,160,89,0.5)]">
                    Get the Book
                 </a>
-                <a href="mailto:partners@csp.com?subject=WealthWave%20Mission%20Inquiry" className="border border-gray-600 text-white px-8 py-4 font-medium hover:bg-gray-800 transition-colors w-full md:w-auto text-center rounded-sm">
+                <a href="mailto:michelle@creativesolutionspartners.com?subject=WealthWave%20Mission%20Inquiry" className="border border-gray-600 text-white px-8 py-4 font-medium hover:bg-gray-800 transition-colors w-full md:w-auto text-center rounded-sm">
                    Join Mission
                 </a>
              </div>

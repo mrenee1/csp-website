@@ -192,7 +192,7 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
             </p>
             <button 
               onClick={() => {
-                window.location.href = 'mailto:partners@csp.com?subject=Creative%20Web%20Consultation';
+                window.location.href = 'mailto:michelle@creativesolutionspartners.com?subject=Creative%20Web%20Consultation';
               }}
               className="bg-purple-500 text-white px-12 py-5 font-bold hover:bg-purple-600 transition-all duration-500 rounded-lg text-lg uppercase tracking-widest shadow-lg hover:shadow-purple-500/25"
             >

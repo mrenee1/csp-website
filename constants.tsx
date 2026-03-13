@@ -101,11 +101,11 @@ export const TEAM_MEMBERS: TeamMember[] = [
     specialties: ['Vision', 'Collaboration', 'Business Growth']
   },
   {
-    id: 'sheleeah',
-    name: 'Sheleeah Ballard',
+    id: 'sheleeha',
+    name: 'Sheleeha Ballard',
     role: 'Chief Operating Officer',
-    bio: 'Sheleeah Ballard oversees operations and execution across the organization, helping transform strategy into action. She plays a central role in ensuring the team delivers a smooth, organized, and high-quality experience for partners and clients.',
-    image: '/images/team/sheleeah-ballard.jpg',
+    bio: 'Sheleeha Ballard oversees operations and execution across the organization, helping transform strategy into action. She plays a central role in ensuring the team delivers a smooth, organized, and high-quality experience for partners and clients.',
+    image: '/images/team/sheleeha-ballard.jpg',
     specialties: ['Operations', 'Execution', 'Team Leadership']
   }
 ];

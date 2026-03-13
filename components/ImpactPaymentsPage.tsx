@@ -168,7 +168,7 @@ export const ImpactPaymentsPage: React.FC<ImpactPaymentsPageProps> = ({ onBack, 
             <div className="text-center mt-16">
               <button 
                 onClick={() => {
-                  window.location.href = 'mailto:partners@csp.com?subject=Impact%20Payment%20Group%20Consultation';
+                  window.location.href = 'mailto:michelle@creativesolutionspartners.com?subject=Impact%20Payment%20Group%20Consultation';
                 }}
                 className="bg-blue-500 text-white px-12 py-5 font-bold hover:bg-blue-600 transition-all duration-500 rounded-lg text-lg uppercase tracking-widest shadow-lg hover:shadow-blue-500/25"
               >
