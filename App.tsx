@@ -6,6 +6,7 @@ import { SolutionPage } from './components/SolutionPage';
 import { ClarityPage } from './components/ClarityPage';
 import { WealthWavePage } from './components/WealthWavePage';
 import { ChampionHealthPage } from './components/ChampionHealthPage';
+import { BizBoostPage } from './components/BizBoostPage';
 import { TeamCarousel } from './components/TeamCarousel';
 import { TopNav } from './components/TopNav';
 import { HomePage } from './components/HomePage';
@@ -22,10 +23,6 @@ export default function App() {
   }, []);
 
   const navigateTo = (page: PageName) => {
-    if (page === 'bizboost') {
-      window.location.href = 'mailto:michelle@creativesolutionspartners.com?subject=Technology%20Services%20Consultation%20(Biz%20Boost)';
-      return;
-    }
     setActivePage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -57,6 +54,7 @@ export default function App() {
         {activePage === 'clarity' && <ClarityPage onBack={() => navigateTo('tech')} onNavigate={navigateTo} />}
         {activePage === 'wealthwave' && <WealthWavePage onBack={() => navigateTo('wealth')} onNavigate={navigateTo} />}
         {activePage === 'championhealth' && <ChampionHealthPage onBack={() => navigateTo('health')} onNavigate={navigateTo} />}
+        {activePage === 'bizboost' && <BizBoostPage onBack={() => navigateTo('tech')} onNavigate={navigateTo} />}
 
         {['health', 'wealth', 'tech'].includes(activePage) && (
           <SolutionPage data={SERVICES[activePage as keyof typeof SERVICES]} onBack={() => navigateTo('home')} onNavigate={navigateTo} />
