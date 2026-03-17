@@ -12,23 +12,29 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       {/* Header */}
-      <div className="bg-[#00FFCC] border-b border-white/20">
-        <div className="py-20 px-6 md:px-12 lg:px-24">
+      <div className="bg-[#0a0a0a] border-b border-white/10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#C5A059]/10 via-transparent to-transparent"></div>
+        <div className="py-20 px-6 md:px-12 lg:px-24 relative z-10">
           <button 
             onClick={onBack}
-            className="inline-flex items-center gap-2 text-[#0a0a0a]/70 hover:text-[#0a0a0a] transition-colors mb-12 text-sm uppercase tracking-widest"
+            className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors mb-12 text-sm uppercase tracking-widest"
           >
             <ArrowLeft size={16} /> Back Home
           </button>
           
           <div className="text-center">
-            <h1 className="text-7xl md:text-9xl font-serif font-bold text-[#00FFCC] mb-2" style={{ WebkitTextStroke: '2px #0a0a0a', textShadow: '3px 3px 0px #0a0a0a' }}>
-              CREATIVE
+            <p className="text-xs uppercase tracking-[0.3em] text-[#C5A059] mb-4">Creative Solutions Partners</p>
+            <h1 className="text-6xl md:text-8xl font-serif font-bold text-[#C5A059] mb-4 drop-shadow-[0_0_30px_rgba(197,160,89,0.3)]">
+              Creative Web
             </h1>
-            <h2 className="text-5xl md:text-7xl font-serif font-bold text-[#00FFCC] mb-6 tracking-widest" style={{ WebkitTextStroke: '2px #0a0a0a', textShadow: '3px 3px 0px #0a0a0a' }}>
-              WEB
-            </h2>
-            <p className="text-lg text-[#0a0a0a]/70 font-light tracking-wide">
+            <div className="w-24 h-px bg-[#C5A059] mx-auto mb-6"></div>
+            <p className="text-xl md:text-2xl text-white font-light mb-2">
+              Digital Presence. Built to Perform.
+            </p>
+            <p className="text-sm text-white/60 max-w-md mx-auto mb-6">
+              Web design, branding, content, and digital systems for modern business growth.
+            </p>
+            <p className="text-xs uppercase tracking-[0.2em] text-[#C5A059]/80">
               Powered by Biz Boost Agency
             </p>
           </div>
