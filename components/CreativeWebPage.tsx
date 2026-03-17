@@ -190,14 +190,12 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
             <p className="text-xl text-gray-300 mb-10 leading-relaxed">
               Let's discuss how we can transform your online presence and drive real business results through exceptional web design and development.
             </p>
-            <button 
-              onClick={() => {
-                window.location.href = 'mailto:michelle@creativesolutionspartners.com?subject=Creative%20Web%20Consultation';
-              }}
-              className="bg-[#FF2D92] text-white px-12 py-5 font-bold hover:bg-[#FF2D92]/80 transition-all duration-500 rounded-lg text-lg uppercase tracking-widest shadow-lg hover:shadow-[#FF2D92]/25 border-2 border-[#FF2D92]"
+            <a 
+              href="mailto:michelle@creativesolutionspartners.com?subject=Creative%20Web%20Project%20Inquiry&body=Hi%20CSP%20Team%2C%0A%0AI'm%20interested%20in%20discussing%20a%20Creative%20Web%20project.%20Please%20contact%20me%20to%20schedule%20a%20consultation.%0A%0ABest%20regards"
+              className="inline-block bg-[#C5A059] text-[#0a0a0a] px-12 py-5 font-bold hover:bg-[#D4AF37] transition-all duration-500 rounded-lg text-lg uppercase tracking-widest shadow-lg hover:shadow-[#C5A059]/25 border-2 border-[#C5A059]"
             >
               Start Your Project
-            </button>
+            </a>
           </div>
         </section>
       </div>
