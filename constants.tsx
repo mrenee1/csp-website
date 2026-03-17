@@ -99,14 +99,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     bio: 'Robin Bundy plays a key leadership role in shaping the direction of Creative Solutions Partners. With a strong emphasis on collaboration, innovation, and service, Robin helps guide the company\'s mission and future growth.',
     image: '/images/team/robin-bundy.jpg',
     specialties: ['Vision', 'Collaboration', 'Business Growth']
-  },
-  {
-    id: 'sheleeha',
-    name: 'Sheleeha Ballard',
-    role: 'Chief Operating Officer',
-    bio: 'Sheleeha Ballard oversees operations and execution across the organization, helping transform strategy into action. She plays a central role in ensuring the team delivers a smooth, organized, and high-quality experience for partners and clients.',
-    image: '/images/team/sheleeha-ballard.jpg',
-    specialties: ['Operations', 'Execution', 'Team Leadership']
   }
 ];
 
