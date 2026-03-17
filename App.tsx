@@ -12,6 +12,7 @@ import { TopNav } from './components/TopNav';
 import { HomePage } from './components/HomePage';
 import { Newsletter } from './components/Newsletter';
 import { ArrowLeft } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -102,6 +103,7 @@ export default function App() {
           </div>
         )}
       </div>
+      <Analytics />
     </div>
   );
 }
