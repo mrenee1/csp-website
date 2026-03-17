@@ -341,7 +341,7 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
                 <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
-                <span className="ml-4 text-[10px] text-gray-500 font-mono tracking-widest uppercase">insights.championhealth.co</span>
+                <span className="ml-4 text-[10px] text-gray-500 font-mono tracking-widest uppercase">insights.creativesolutionspartners.com</span>
               </div>
               <div className="p-10 space-y-8">
                 <div className="grid grid-cols-3 gap-4">
@@ -377,7 +377,7 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
         </div>
       </section>
 
-      {/* Champion Health Difference - Comparison Table */}
+      {/* Creative Care Difference - Comparison Table */}
       <section className="py-32 md:py-48 bg-[#18181b]">
         <div className="px-6 md:px-12 lg:px-24">
           <RevealSection className="max-w-6xl mx-auto">

@@ -95,9 +95,26 @@ export const Sidebar: React.FC<SidebarProps> = ({ activePage, onNavigate, isOpen
 
         {/* Footer */}
         <div className="p-6 border-t border-gray-800 bg-gray-900/50">
-          <p className="text-[10px] text-gray-600 px-4">
-            &copy; {new Date().getFullYear()} Creative Solutions Partners
-          </p>
+          <div className="px-4 space-y-3">
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => onNavigate('trust')}
+                className="text-[10px] text-gray-500 hover:text-brand-gold transition-colors uppercase tracking-widest"
+              >
+                Trust Center
+              </button>
+              <span className="text-gray-700">|</span>
+              <button
+                onClick={() => onNavigate('privacy')}
+                className="text-[10px] text-gray-500 hover:text-brand-gold transition-colors uppercase tracking-widest"
+              >
+                Privacy Policy
+              </button>
+            </div>
+            <p className="text-[10px] text-gray-600">
+              &copy; {new Date().getFullYear()} Creative Solutions Partners
+            </p>
+          </div>
         </div>
       </div>
     </>

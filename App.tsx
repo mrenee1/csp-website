@@ -10,6 +10,8 @@ import { ImpactPaymentsPage } from './components/ImpactPaymentsPage';
 import { CreativeWebPage } from './components/CreativeWebPage';
 import { PartnerApplication } from './components/PartnerApplication';
 import { LoginScreen } from './components/LoginScreen';
+import { TrustCenter } from './components/TrustCenter';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { TeamCarousel } from './components/TeamCarousel';
 import { TopNav } from './components/TopNav';
 import { HomePage } from './components/HomePage';
@@ -91,14 +93,17 @@ export default function App() {
         )}
 
         {activePage === 'partner-application' && (
-          <PartnerApplication 
-            onBack={() => navigateTo('home')} 
-            onNavigate={navigateTo} 
+          <PartnerApplication
+            onBack={() => navigateTo('home')}
+            onNavigate={navigateTo}
             isAuthenticated={isAuthenticated}
             user={user}
             onLogout={handleLogout}
           />
         )}
+
+        {activePage === 'trust' && <TrustCenter onBack={() => navigateTo('home')} onNavigate={navigateTo} />}
+        {activePage === 'privacy' && <PrivacyPolicy onBack={() => navigateTo('home')} onNavigate={navigateTo} />}
 
         {activePage === 'about' && (
           <div className="py-24 px-6 md:px-12 lg:px-24 animate-fade-in" style={{ background: 'var(--bg)', minHeight: '100vh' }}>

@@ -308,7 +308,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       </footer>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Creative Solutions Partners — All rights reserved</span>
-        <span>Resolution for Your Health and Wealth</span>
+        <div className="flex items-center gap-4">
+          <button onClick={() => onNavigate('trust')} className="text-gray-400 hover:text-white transition-colors">Trust Center</button>
+          <span className="text-gray-600">|</span>
+          <button onClick={() => onNavigate('privacy')} className="text-gray-400 hover:text-white transition-colors">Privacy Policy</button>
+        </div>
       </div>
     </div>
   );
