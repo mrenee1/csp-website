@@ -17,7 +17,7 @@ export const WealthWavePage: React.FC<WealthWavePageProps> = ({ onBack, onNaviga
           onClick={onBack}
           className="relative z-10 flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-8 md:mb-12 text-sm uppercase tracking-widest group"
         >
-          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Finance
+          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Solutions
         </button>
         
         <div className="relative z-10 flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">

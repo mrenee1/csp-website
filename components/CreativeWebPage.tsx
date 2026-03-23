@@ -19,7 +19,7 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
             onClick={onBack}
             className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors mb-12 text-sm uppercase tracking-widest"
           >
-            <ArrowLeft size={16} /> Back to Technology
+            <ArrowLeft size={16} /> Back to Solutions
           </button>
           
           <div className="text-center">

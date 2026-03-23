@@ -136,10 +136,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           </div>
         </div>
         <div className="footer-col">
-          <h4>Solutions</h4>
-          <button onClick={() => onNavigate('health')}>Health</button>
-          <button onClick={() => onNavigate('finance')}>Wealth</button>
-          <button onClick={() => onNavigate('tech')}>Technology</button>
+          <h4>Company</h4>
+          <button onClick={() => onNavigate('solutions')}>Our Platform</button>
+          <button onClick={() => onNavigate('about')}>About Us</button>
+          <button onClick={() => onNavigate('partner-application')}>Become a Partner</button>
         </div>
       </footer>
       <div className="footer-bottom">

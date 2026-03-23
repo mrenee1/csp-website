@@ -63,14 +63,14 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
               Solutions <span className="dd-arrow">▼</span>
             </button>
             <div className="nav-dropdown-panel">
-              <button className="nav-dd-label" onClick={() => nav('health')}>Health</button>
+              <span className="nav-dd-label">Health</span>
               <button className="nav-dd-item" onClick={() => nav('championhealth')}>Creative Care</button>
               <div className="nav-dd-divider" />
-              <button className="nav-dd-label" onClick={() => nav('finance')}>Finance</button>
+              <span className="nav-dd-label">Finance</span>
               <button className="nav-dd-item" onClick={() => nav('wealthwave')}>WealthWave</button>
               <button className="nav-dd-item" onClick={() => nav('creativepayments')}>Impact Payments</button>
               <div className="nav-dd-divider" />
-              <button className="nav-dd-label" onClick={() => nav('tech')}>Technology</button>
+              <span className="nav-dd-label">Technology</span>
               <button className="nav-dd-item" onClick={() => nav('bizboost')}>Creative Web</button>
               <button className="nav-dd-item" onClick={() => nav('clarity')}>Clarity Commissions</button>
             </div>
@@ -84,7 +84,7 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
               Partners <span className="dd-arrow">▼</span>
             </button>
             <div className="nav-dropdown-panel">
-              <button className="nav-dd-item" onClick={() => nav('solutions')}>Our Solutions</button>
+              <button className="nav-dd-item" onClick={() => nav('solutions')}>Our Platform</button>
               <div className="nav-dd-divider" />
               <button className="nav-dd-item" onClick={() => nav('partner-application')}>Become a Partner →</button>
             </div>
@@ -124,12 +124,12 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
           <button onClick={() => { onNavigate('home'); setMobileOpen(false); }}>Home</button>
 
           {/* Solutions group */}
-          <button className="mobile-group-label" onClick={() => nav('health')}>Health</button>
+          <span className="mobile-group-label">Health</span>
           <button className="mobile-group-item" onClick={() => nav('championhealth')}>Creative Care</button>
-          <button className="mobile-group-label" onClick={() => nav('finance')}>Finance</button>
+          <span className="mobile-group-label">Finance</span>
           <button className="mobile-group-item" onClick={() => nav('wealthwave')}>WealthWave</button>
           <button className="mobile-group-item" onClick={() => nav('creativepayments')}>Impact Payments</button>
-          <button className="mobile-group-label" onClick={() => nav('tech')}>Technology</button>
+          <span className="mobile-group-label">Technology</span>
           <button className="mobile-group-item" onClick={() => nav('bizboost')}>Creative Web</button>
           <button className="mobile-group-item" onClick={() => nav('clarity')}>Clarity Commissions</button>
 
@@ -137,7 +137,7 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
 
           {/* Partners group */}
           <button className="mobile-group-label" onClick={() => nav('solutions')}>Partners</button>
-          <button className="mobile-group-item" onClick={() => nav('solutions')}>Our Solutions</button>
+          <button className="mobile-group-item" onClick={() => nav('solutions')}>Our Platform</button>
           <button className="mobile-group-item" onClick={() => nav('partner-application')}>Become a Partner</button>
 
           <button onClick={() => { window.open('https://creativesolutionsinsights.com/', '_blank'); setMobileOpen(false); }}>Insights</button>

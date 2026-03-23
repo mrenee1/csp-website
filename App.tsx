@@ -2,7 +2,6 @@ import React, { useState, useCallback } from 'react';
 import { IntroAnimation } from './components/IntroAnimation';
 import { SERVICES, TEAM_MEMBERS } from './constants';
 import { PageName } from './types';
-import { SolutionPage } from './components/SolutionPage';
 import { ClarityPage } from './components/ClarityPage';
 import { WealthWavePage } from './components/WealthWavePage';
 import { ChampionHealthPage } from './components/ChampionHealthPage';
@@ -60,17 +59,13 @@ export default function App() {
           <HomePage onNavigate={navigateTo} />
         )}
 
-        {activePage === 'clarity' && <ClarityPage onBack={() => navigateTo('tech')} onNavigate={navigateTo} />}
-        {activePage === 'wealthwave' && <WealthWavePage onBack={() => navigateTo('finance')} onNavigate={navigateTo} />}
-        {activePage === 'championhealth' && <ChampionHealthPage onBack={() => navigateTo('health')} onNavigate={navigateTo} />}
-        {activePage === 'creativepayments' && <ImpactPaymentsPage onBack={() => navigateTo('finance')} onNavigate={navigateTo} />}
-        {activePage === 'bizboost' && <CreativeWebPage onBack={() => navigateTo('tech')} onNavigate={navigateTo} />}
+        {activePage === 'clarity' && <ClarityPage onBack={() => navigateTo('solutions')} onNavigate={navigateTo} />}
+        {activePage === 'wealthwave' && <WealthWavePage onBack={() => navigateTo('solutions')} onNavigate={navigateTo} />}
+        {activePage === 'championhealth' && <ChampionHealthPage onBack={() => navigateTo('solutions')} onNavigate={navigateTo} />}
+        {activePage === 'creativepayments' && <ImpactPaymentsPage onBack={() => navigateTo('solutions')} onNavigate={navigateTo} />}
+        {activePage === 'bizboost' && <CreativeWebPage onBack={() => navigateTo('solutions')} onNavigate={navigateTo} />}
 
         {activePage === 'solutions' && <OurSolutionsPage onBack={() => navigateTo('home')} onNavigate={navigateTo} />}
-
-        {['health', 'finance', 'tech'].includes(activePage) && (
-          <SolutionPage data={SERVICES[activePage as keyof typeof SERVICES]} onBack={() => navigateTo('home')} onNavigate={navigateTo} />
-        )}
 
         {activePage === 'login' && (
           <LoginScreen 
