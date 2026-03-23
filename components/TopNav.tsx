@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PageName } from '../types';
 import { useTheme } from './ThemeContext';
 import { Sun, Moon } from 'lucide-react';
@@ -13,6 +13,15 @@ interface TopNavProps {
 export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthenticated = false, onLogout }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileOpen]);
 
   const scrollOrNav = (sectionId: string) => {
     if (activePage === 'home') {

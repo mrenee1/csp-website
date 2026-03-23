@@ -71,11 +71,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       {/* ════════ ANSWER BRIDGE ════════ */}
       <Reveal>
         <div className="answer-bridge">
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 32 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 24 }}>
             <img 
               src="/images/partnership-handshake.jpg" 
               alt="Partnership" 
-              style={{ width: '100%', maxWidth: 600, height: 300, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
+              style={{ width: '100%', maxWidth: 560, height: 260, objectFit: 'cover', borderRadius: 10, opacity: 0.9 }}
             />
           </div>
           <h2>What would it be like if you already knew<br/><strong>it would work the first time?</strong></h2>
