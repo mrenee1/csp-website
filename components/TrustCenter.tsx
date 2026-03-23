@@ -120,10 +120,10 @@ export const TrustCenter: React.FC<TrustCenterProps> = ({ onBack, onNavigate }) 
 
         <div className="relative z-10 max-w-4xl">
           <button
-            onClick={() => onNavigate('home')}
+            onClick={onBack}
             className="inline-flex items-center gap-2 text-gray-500 hover:text-white transition-colors mb-12 text-xs uppercase tracking-[0.3em] group"
           >
-            <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Back Home
+            <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Back
           </button>
 
           <div className="inline-flex items-center gap-2 bg-[#C5A059]/20 text-[#C5A059] px-4 py-1.5 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] border border-[#C5A059]/30 mb-8">
@@ -238,7 +238,7 @@ export const TrustCenter: React.FC<TrustCenterProps> = ({ onBack, onNavigate }) 
             If you have discovered a security vulnerability or have concerns about our security practices, please contact our security team immediately.
           </p>
           <a
-            href="mailto:security@creativesolutionspartners.com?subject=Security%20Inquiry"
+            href="mailto:michelle@creativesolutionspartners.com?subject=Security%20Inquiry"
             className="inline-flex items-center gap-2 text-[#C5A059] hover:text-white transition-colors text-sm uppercase tracking-widest"
           >
             Contact Security Team <ChevronRight size={14} />

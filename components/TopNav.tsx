@@ -50,18 +50,18 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
         <div className="nav-links">
           {/* Solutions dropdown */}
           <div className="nav-dropdown-wrap">
-            <button className="nav-dropdown-trigger" onClick={() => scrollOrNav('solutions')}>
+            <button className="nav-dropdown-trigger" onClick={() => nav('solutions')}>
               Solutions <span className="dd-arrow">▼</span>
             </button>
             <div className="nav-dropdown-panel">
-              <span className="nav-dd-label">Health</span>
+              <button className="nav-dd-label" onClick={() => nav('health')}>Health</button>
               <button className="nav-dd-item" onClick={() => nav('championhealth')}>Creative Care</button>
               <div className="nav-dd-divider" />
-              <span className="nav-dd-label">Finance</span>
+              <button className="nav-dd-label" onClick={() => nav('finance')}>Finance</button>
               <button className="nav-dd-item" onClick={() => nav('wealthwave')}>WealthWave</button>
               <button className="nav-dd-item" onClick={() => nav('creativepayments')}>Impact Payments</button>
               <div className="nav-dd-divider" />
-              <span className="nav-dd-label">Technology</span>
+              <button className="nav-dd-label" onClick={() => nav('tech')}>Technology</button>
               <button className="nav-dd-item" onClick={() => nav('bizboost')}>Creative Web</button>
               <button className="nav-dd-item" onClick={() => nav('clarity')}>Clarity Commissions</button>
             </div>
@@ -71,17 +71,17 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
 
           {/* Partners dropdown */}
           <div className="nav-dropdown-wrap">
-            <button className="nav-dropdown-trigger" onClick={() => scrollOrNav('solutions')}>
+            <button className="nav-dropdown-trigger" onClick={() => nav('solutions')}>
               Partners <span className="dd-arrow">▼</span>
             </button>
             <div className="nav-dropdown-panel">
-              <button className="nav-dd-item" onClick={() => scrollOrNav('solutions')}>Our Solutions</button>
+              <button className="nav-dd-item" onClick={() => nav('solutions')}>Our Solutions</button>
               <div className="nav-dd-divider" />
-              <button className="nav-dd-item" onClick={() => onNavigate('partner-application')}>Become a Partner →</button>
+              <button className="nav-dd-item" onClick={() => nav('partner-application')}>Become a Partner →</button>
             </div>
           </div>
 
-          <button onClick={() => window.open('https://csp-insights.replit.app', '_blank')}>Insights</button>
+          <button onClick={() => window.open('https://creativesolutionsinsights.com/', '_blank')}>Insights</button>
           <button onClick={() => onNavigate('about')}>About</button>
           
           {/* Theme Toggle */}
@@ -96,7 +96,7 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
           {isAuthenticated ? (
             <button className="nav-cta-btn" onClick={onLogout}>Logout</button>
           ) : (
-            <button className="nav-cta-btn" onClick={() => onNavigate('login')}>Partner Login</button>
+            <button className="nav-cta-btn" onClick={() => onNavigate('login')}>CSP Portal</button>
           )}
         </div>
 
@@ -115,21 +115,23 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
           <button onClick={() => { onNavigate('home'); setMobileOpen(false); }}>Home</button>
 
           {/* Solutions group */}
-          <button className="mobile-group-label" disabled>Solutions</button>
+          <button className="mobile-group-label" onClick={() => nav('health')}>Health</button>
           <button className="mobile-group-item" onClick={() => nav('championhealth')}>Creative Care</button>
+          <button className="mobile-group-label" onClick={() => nav('finance')}>Finance</button>
           <button className="mobile-group-item" onClick={() => nav('wealthwave')}>WealthWave</button>
           <button className="mobile-group-item" onClick={() => nav('creativepayments')}>Impact Payments</button>
+          <button className="mobile-group-label" onClick={() => nav('tech')}>Technology</button>
           <button className="mobile-group-item" onClick={() => nav('bizboost')}>Creative Web</button>
           <button className="mobile-group-item" onClick={() => nav('clarity')}>Clarity Commissions</button>
 
 
 
           {/* Partners group */}
-          <button className="mobile-group-label" disabled>Partners</button>
-          <button className="mobile-group-item" onClick={() => scrollOrNav('solutions')}>Our Solutions</button>
-          <button className="mobile-group-item" onClick={() => { onNavigate('partner-application'); setMobileOpen(false); }}>Become a Partner</button>
+          <button className="mobile-group-label" onClick={() => nav('solutions')}>Partners</button>
+          <button className="mobile-group-item" onClick={() => nav('solutions')}>Our Solutions</button>
+          <button className="mobile-group-item" onClick={() => nav('partner-application')}>Become a Partner</button>
 
-          <button onClick={() => { window.open('https://csp-insights.replit.app', '_blank'); setMobileOpen(false); }}>Insights</button>
+          <button onClick={() => { window.open('https://creativesolutionsinsights.com/', '_blank'); setMobileOpen(false); }}>Insights</button>
           <button onClick={() => { onNavigate('about'); setMobileOpen(false); }}>About</button>
           
           {/* Mobile Theme Toggle */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, Palette, Code, Smartphone, Globe, Zap, Shield, Users } from 'lucide-react';
+import { ArrowLeft, Palette, Monitor, Share2, Lightbulb, BarChart2, Mail, Zap, Shield, Users } from 'lucide-react';
 import { PageName } from '../types';
 import { Galaxy } from './Galaxy';
 
@@ -19,7 +19,7 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
             onClick={onBack}
             className="inline-flex items-center gap-2 text-white/50 hover:text-white transition-colors mb-12 text-sm uppercase tracking-widest"
           >
-            <ArrowLeft size={16} /> Back Home
+            <ArrowLeft size={16} /> Back to Technology
           </button>
           
           <div className="text-center">
@@ -46,45 +46,41 @@ export const CreativeWebPage: React.FC<CreativeWebPageProps> = ({ onBack, onNavi
         {/* Core Services Section */}
         <section className="mb-32">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-5xl md:text-7xl font-serif font-medium text-center mb-16">
-              <span className="text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">BUILD.</span> <span className="text-[#00FFCC] drop-shadow-[0_0_8px_rgba(0,255,204,0.5)]">BRAND.</span> <span className="text-[#FF3399] drop-shadow-[0_0_8px_rgba(255,51,153,0.5)]">DOMINATE.</span>
-            </h2>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
+                  icon: Monitor,
+                  title: "Web Design",
+                  description: "Custom websites built to convert. Fast, mobile-first, designed to make your competition nervous."
+                },
+                {
                   icon: Palette,
-                  title: "Custom Website Design",
-                  description: "Beautiful, responsive websites crafted specifically for your brand and audience. Modern designs that convert visitors into customers."
+                  title: "Brand Identity",
+                  description: "Logos, color systems, and brand guidelines that make you instantly recognizable and undeniably credible."
                 },
                 {
-                  icon: Code,
-                  title: "Web Development",
-                  description: "Clean, efficient code with cutting-edge technology. From simple sites to complex web applications."
+                  icon: Share2,
+                  title: "Social Media",
+                  description: "Content strategy and scheduling that builds community and keeps your brand in the feed — every day."
                 },
                 {
-                  icon: Smartphone,
-                  title: "Mobile Optimization",
-                  description: "Fully responsive designs that look perfect on every device. Mobile-first approach for today's users."
+                  icon: Lightbulb,
+                  title: "Consulting",
+                  description: "We diagnose your business, identify the leaks, and hand you a concrete roadmap to plug them."
                 },
                 {
-                  icon: Globe,
-                  title: "SEO & Performance",
-                  description: "Fast-loading websites optimized for search engines. Technical SEO implementation for better rankings."
+                  icon: BarChart2,
+                  title: "SEO & Ads",
+                  description: "Organic rankings and paid campaigns that bring buyers to your door — not browsers. ROI-focused."
                 },
                 {
-                  icon: Zap,
-                  title: "E-Commerce Solutions",
-                  description: "Complete online store setups with secure payment processing, inventory management, and conversion optimization."
-                },
-                {
-                  icon: Shield,
-                  title: "Security & Maintenance",
-                  description: "Ongoing security updates, backups, and performance monitoring to keep your site running smoothly."
+                  icon: Mail,
+                  title: "Email Marketing",
+                  description: "Automated sequences and newsletters that turn one-time buyers into loyal, repeat customers."
                 }
               ].map((service, index) => (
-                <div key={index} className="bg-[#18181b] p-8 rounded-xl border border-white/10 hover:border-[#FF2D92]/40 transition-all duration-500 group">
-                  <div className="w-16 h-16 bg-[#FF2D92]/10 rounded-full flex items-center justify-center mb-6 text-[#FF2D92] group-hover:bg-[#FF2D92]/20 transition-colors">
+                <div key={index} className="bg-[#18181b] p-8 rounded-xl border border-white/10 hover:border-[#C5A059]/40 transition-all duration-500 group">
+                  <div className="w-16 h-16 bg-[#C5A059]/10 rounded-full flex items-center justify-center mb-6 text-[#C5A059] group-hover:bg-[#C5A059]/20 transition-colors">
                     <service.icon size={32} />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>

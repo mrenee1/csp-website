@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
+import { IntroAnimation } from './components/IntroAnimation';
 import { SERVICES, TEAM_MEMBERS } from './constants';
 import { PageName } from './types';
 import { SolutionPage } from './components/SolutionPage';
@@ -15,12 +16,16 @@ import { TeamCarousel } from './components/TeamCarousel';
 import { TopNav } from './components/TopNav';
 import { HomePage } from './components/HomePage';
 import { ChatBot } from './components/ChatBot';
+import { OurSolutionsPage } from './components/OurSolutionsPage';
 import { ArrowLeft } from 'lucide-react';
 
 export default function App() {
+  const [showIntro, setShowIntro] = useState(true);
   const [activePage, setActivePage] = useState<PageName>('home');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState<{email: string} | null>(null);
+
+  const handleIntroComplete = useCallback(() => setShowIntro(false), []);
 
   const navigateTo = (page: PageName) => {
     setActivePage(page);
@@ -40,6 +45,8 @@ export default function App() {
   };
 
   return (
+    <>
+    {showIntro && <IntroAnimation onComplete={handleIntroComplete} />}
     <div className="min-h-screen" style={{ background: 'var(--bg, #08091a)' }}>
       <TopNav 
         activePage={activePage} 
@@ -55,9 +62,11 @@ export default function App() {
 
         {activePage === 'clarity' && <ClarityPage onBack={() => navigateTo('tech')} onNavigate={navigateTo} />}
         {activePage === 'wealthwave' && <WealthWavePage onBack={() => navigateTo('finance')} onNavigate={navigateTo} />}
-        {activePage === 'championhealth' && <ChampionHealthPage onBack={() => navigateTo('home')} onNavigate={navigateTo} />}
+        {activePage === 'championhealth' && <ChampionHealthPage onBack={() => navigateTo('health')} onNavigate={navigateTo} />}
         {activePage === 'creativepayments' && <ImpactPaymentsPage onBack={() => navigateTo('finance')} onNavigate={navigateTo} />}
         {activePage === 'bizboost' && <CreativeWebPage onBack={() => navigateTo('tech')} onNavigate={navigateTo} />}
+
+        {activePage === 'solutions' && <OurSolutionsPage onBack={() => navigateTo('home')} onNavigate={navigateTo} />}
 
         {['health', 'finance', 'tech'].includes(activePage) && (
           <SolutionPage data={SERVICES[activePage as keyof typeof SERVICES]} onBack={() => navigateTo('home')} onNavigate={navigateTo} />
@@ -73,7 +82,7 @@ export default function App() {
 
         {activePage === 'partner-application' && (
           <PartnerApplication
-            onBack={() => navigateTo('home')}
+            onBack={() => navigateTo('solutions')}
             onNavigate={navigateTo}
             isAuthenticated={isAuthenticated}
             user={user}
@@ -120,5 +129,6 @@ export default function App() {
       {/* Chat Bot */}
       <ChatBot />
     </div>
+    </>
   );
 }

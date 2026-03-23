@@ -18,7 +18,7 @@ export const ImpactPaymentsPage: React.FC<ImpactPaymentsPageProps> = ({ onBack, 
             onClick={onBack}
             className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors mb-12 text-sm uppercase tracking-widest"
           >
-            <ArrowLeft size={16} /> Back to Technology
+            <ArrowLeft size={16} /> Back to Finance
           </button>
           
           <div className="max-w-4xl">

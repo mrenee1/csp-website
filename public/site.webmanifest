@@ -1,0 +1,26 @@
+{
+  "name": "Creative Solutions Partners",
+  "short_name": "CSP",
+  "description": "Strategic growth firm aligning healthcare, financial solutions, and technology to help businesses scale with clarity.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08091a",
+  "theme_color": "#08091a",
+  "icons": [
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

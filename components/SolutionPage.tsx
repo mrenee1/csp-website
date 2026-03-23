@@ -47,11 +47,7 @@ export const SolutionPage: React.FC<{ data: ServiceData; onBack: () => void; onN
   const Icon = data.icon;
 
   const handlePlatformClick = (platformId: string) => {
-    if (platformId === 'bizboost') {
-      window.location.href = `mailto:${LEAD_EMAIL}?subject=Creative%20Web%20Consultation`;
-    } else if (platformId === 'creativepayments') {
-      window.location.href = `mailto:${LEAD_EMAIL}?subject=Creative%20Payments%20Consultation`;
-    } else if (onNavigate) {
+    if (onNavigate) {
       onNavigate(platformId as PageName);
     }
   };
@@ -64,7 +60,7 @@ export const SolutionPage: React.FC<{ data: ServiceData; onBack: () => void; onN
         <div className="relative z-10">
           <button onClick={onBack} className="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity mb-8 group">
             <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
-            <span>Back to Home</span>
+            <span>Back</span>
           </button>
           <div className="max-w-4xl">
             <div className="inline-block p-3 bg-white/10 backdrop-blur-sm rounded-lg mb-6">

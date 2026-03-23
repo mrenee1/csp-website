@@ -182,10 +182,10 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
 
         <div className="relative z-10">
           <button
-            onClick={() => onNavigate('health')}
+            onClick={onBack}
             className="inline-flex items-center gap-2 text-gray-500 hover:text-white transition-colors mb-12 text-xs uppercase tracking-[0.3em] group"
           >
-            <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Back Home
+            <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Back to Health
           </button>
 
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center lg:items-start">

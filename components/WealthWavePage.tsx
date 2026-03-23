@@ -14,10 +14,10 @@ export const WealthWavePage: React.FC<WealthWavePageProps> = ({ onBack, onNaviga
       <section className="bg-[rgb(22,84,97)] text-white pt-28 pb-20 px-6 md:px-12 lg:px-24 relative overflow-hidden">
         
         <button 
-          onClick={() => onNavigate('home')}
+          onClick={onBack}
           className="relative z-10 flex items-center gap-2 text-white/70 hover:text-white transition-colors mb-8 md:mb-12 text-sm uppercase tracking-widest group"
         >
-          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back Home
+          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Finance
         </button>
         
         <div className="relative z-10 flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">

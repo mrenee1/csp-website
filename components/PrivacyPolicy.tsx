@@ -206,10 +206,10 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onBack, onNavigate
 
         <div className="relative z-10 max-w-4xl">
           <button
-            onClick={() => onNavigate('home')}
+            onClick={onBack}
             className="inline-flex items-center gap-2 text-gray-500 hover:text-white transition-colors mb-12 text-xs uppercase tracking-[0.3em] group"
           >
-            <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Back Home
+            <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Back
           </button>
 
           <div className="inline-flex items-center gap-2 bg-[#C5A059]/20 text-[#C5A059] px-4 py-1.5 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] border border-[#C5A059]/30 mb-8">
@@ -261,7 +261,7 @@ export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ onBack, onNavigate
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:privacy@creativesolutionspartners.com?subject=Privacy%20Policy%20Inquiry"
+                href="mailto:michelle@creativesolutionspartners.com?subject=Privacy%20Policy%20Inquiry"
                 className="inline-flex items-center justify-center gap-2 bg-[#C5A059] text-[#0a0a0a] px-8 py-4 font-bold hover:bg-[#d4af37] transition-all duration-500 uppercase tracking-widest text-xs rounded-sm"
               >
                 Contact Privacy Team

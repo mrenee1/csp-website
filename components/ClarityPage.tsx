@@ -129,7 +129,7 @@ export const ClarityPage: React.FC<{ onBack: () => void; onNavigate: (page: Page
         
         <div className="relative z-10">
           <button 
-            onClick={() => onNavigate('tech')}
+            onClick={onBack}
             className="inline-flex items-center gap-2 text-gray-500 hover:text-white transition-colors mb-12 text-xs uppercase tracking-[0.3em] group"
           >
             <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Back to Technology
