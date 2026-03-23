@@ -114,12 +114,12 @@
       .nav-dd-divider{height:1px;background:rgba(201,168,76,0.08);margin:8px 16px}
 
       /* HERO */
-      .hero-new{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 56px 80px;position:relative;overflow:hidden;background:var(--bg)}
+      .hero-new{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 56px 80px;position:relative;overflow:hidden;background:linear-gradient(135deg, #08091a 0%, #1a0a2e 50%, #0d1033 100%);text-align:center}
       .hero-glow{position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(123,63,160,0.15) 0%,transparent 70%);top:-200px;right:-200px;pointer-events:none}
       .hero-glow2{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 70%);bottom:-100px;left:-100px;pointer-events:none}
       .torch-icon{position:absolute;right:7%;top:50%;transform:translateY(-55%);opacity:0.06;width:280px;pointer-events:none}
-      .hero-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.28em;color:var(--gold);text-transform:uppercase;margin-bottom:28px;display:flex;align-items:center;gap:14px;opacity:0;animation:fadeUp 0.7s ease 0.2s forwards}
-      .hero-eyebrow::before{content:'';width:36px;height:1px;background:var(--gold)}
+      .hero-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.28em;color:var(--gold);text-transform:uppercase;margin-bottom:28px;display:flex;align-items:center;justify-content:center;gap:14px;opacity:0;animation:fadeUp 0.7s ease 0.2s forwards}
+      .hero-eyebrow::before,.hero-eyebrow::after{content:'';width:36px;height:1px;background:var(--gold)}
       .hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,10vw,140px);line-height:0.92;letter-spacing:0.02em;margin-bottom:32px;opacity:0;animation:fadeUp 0.8s ease 0.35s forwards}
       .ht-1{color:var(--text);display:block}
       .ht-2{color:transparent;-webkit-text-stroke:1.5px var(--purple2);display:block}
@@ -127,7 +127,7 @@
       .hero-sub{max-width:560px;font-size:18px;font-weight:300;line-height:1.8;color:var(--mid);margin-bottom:24px;opacity:0;animation:fadeUp 0.8s ease 0.5s forwards}
       .hero-sub strong{color:var(--text);font-weight:500}
       .hero-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;color:var(--gold);margin-bottom:48px;opacity:0;animation:fadeUp 0.7s ease 0.65s forwards}
-      .hero-btns{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:fadeUp 0.7s ease 0.8s forwards}
+      .hero-btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;opacity:0;animation:fadeUp 0.7s ease 0.8s forwards}
       .btn-gold{padding:15px 40px;background:var(--gold);color:var(--bg);font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:0.12em;border:none;border-radius:2px;text-decoration:none;transition:all 0.25s;cursor:pointer;display:inline-block}
       .btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,168,76,0.3)}
       .btn-ghost{padding:15px 40px;border:1px solid var(--border);color:var(--text);font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:0.12em;border-radius:2px;text-decoration:none;transition:all 0.25s;background:transparent;cursor:pointer;display:inline-block}
@@ -463,6 +463,15 @@
         .field-stats{grid-template-columns:1fr 1fr}
         .answer-bridge{padding:40px 20px}
       }
+
+      /* PROMISE SECTION */
+      .promise-section{padding:48px 56px 56px;text-align:center;background:linear-gradient(135deg,rgba(123,63,160,0.08) 0%,rgba(201,168,76,0.05) 100%);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+      .promise-eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.22em;color:var(--muted);text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:10px}
+      .promise-eyebrow::before,.promise-eyebrow::after{content:'';width:24px;height:1px;background:var(--muted);opacity:0.5}
+      .promise-body{font-family:'Barlow',sans-serif;font-size:18px;font-weight:300;line-height:1.8;color:var(--mid);max-width:580px;margin:0 auto 10px}
+      .promise-body strong{color:var(--text);font-weight:500}
+      .promise-kicker{font-family:'Barlow',sans-serif;font-size:15px;font-weight:400;color:var(--muted);font-style:italic;margin-top:8px}
+      @media(max-width:768px){.promise-section{padding:40px 20px}}
     </style>
 </head>
   <body>

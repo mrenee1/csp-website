@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Logo } from './components/Logo';
+import React, { useState } from 'react';
 import { SERVICES, TEAM_MEMBERS } from './constants';
 import { PageName } from './types';
 import { SolutionPage } from './components/SolutionPage';
@@ -19,15 +18,9 @@ import { ChatBot } from './components/ChatBot';
 import { ArrowLeft } from 'lucide-react';
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
   const [activePage, setActivePage] = useState<PageName>('home');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState<{email: string} | null>(null);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 2200);
-    return () => clearTimeout(timer);
-  }, []);
 
   const navigateTo = (page: PageName) => {
     setActivePage(page);
@@ -45,20 +38,6 @@ export default function App() {
     setUser(null);
     setActivePage('home');
   };
-
-  if (loading) {
-    return (
-      <div className="fixed inset-0 flex items-center justify-center bg-[#08091a] z-50">
-        <div className="text-center">
-          <Logo />
-          <div className="h-[2px] w-40 bg-white/10 mt-6 overflow-hidden rounded-full">
-            <div className="h-full w-1/2 bg-brand-gold animate-[shimmer_1.5s_infinite]" />
-          </div>
-          <p className="mt-8 text-[10px] uppercase tracking-[0.35em] text-white/60 font-medium">Resolution for your health, wealth, and technology</p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen" style={{ background: 'var(--bg, #08091a)' }}>

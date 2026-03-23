@@ -43,7 +43,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   return (
     <div className="hp-wrap">
       {/* ════════ HERO ════════ */}
-      <section className="hero-new" style={{ backgroundImage: 'url(/images/hero-background.jpg)', backgroundSize: 'cover', backgroundPosition: 'top center' }}>
+      <section className="hero-new">
         <div className="hero-glow" />
         <div className="hero-glow2" />
         <svg className="torch-icon" viewBox="0 0 120 280" fill="none"><ellipse cx="60" cy="100" rx="40" ry="60" fill="rgba(123,63,160,0.6)"/><ellipse cx="60" cy="80" rx="28" ry="44" fill="rgba(201,168,76,0.5)"/><ellipse cx="60" cy="65" rx="16" ry="28" fill="rgba(245,240,232,0.4)"/><rect x="48" y="155" width="24" height="90" rx="4" fill="rgba(201,168,76,0.4)"/><rect x="44" y="148" width="32" height="16" rx="2" fill="rgba(201,168,76,0.5)"/><rect x="40" y="220" width="40" height="8" rx="2" fill="rgba(201,168,76,0.3)"/></svg>
@@ -53,10 +53,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <span className="ht-2">Expand.</span>
           <span className="ht-3">Simplify.</span>
         </h1>
-        <p className="hero-sub">
-          Running a business today means drowning in options, tools, vendors, and decisions — all pulling you away from the work that actually matters.
-          <strong> What if you already knew it would work the first time?</strong>
-        </p>
         <div className="hero-tagline">"Our goal is to grow. Our product is partnership."</div>
         <div className="hero-btns">
           <button className="btn-gold" onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}>Find Your Solution</button>
@@ -64,18 +60,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* ════════ TICKER ════════ */}
-      <div className="ticker">
-        <div className="ticker-track">
-          {[...Array(2)].map((_, rep) => (
-            <React.Fragment key={rep}>
-              {['Creative Care', 'Creative Compensation', 'Creative Wealth Education', 'Creative Web', 'Creative Payments', 'The CSP Platform', 'Health', 'Wealth', 'Technology'].map((t) => (
-                <span className="ticker-item" key={`${rep}-${t}`}>{t} <span className="ticker-sep">✦</span></span>
-              ))}
-            </React.Fragment>
-          ))}
-        </div>
-      </div>
+      {/* ════════ PROMISE ════════ */}
+      <section className="promise-section">
+        <div className="promise-eyebrow">The CSP Promise</div>
+        <p className="promise-body">
+          We partner with growing businesses to <strong>make you money</strong>, <strong>save you money</strong>, and <strong>run more efficiently</strong>.
+        </p>
+        <p className="promise-kicker">
+          If we can't do at least one of those three things for you — we won't ask for your time.
+        </p>
+      </section>
 
       {/* ════════ CHAOS SECTION ════════ */}
       <section className="chaos">
