@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { PageName } from '../types';
 import { PLATFORM_PILLARS } from '../constants';
+import { LazyImage } from './LazyImage';
 
 interface HomePageProps {
   onNavigate: (page: PageName) => void;
@@ -54,8 +55,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <span className="ht-3">Simplify.</span>
         </h1>
         <p className="hero-sub">
-          Running a business today means drowning in options, tools, vendors, and decisions — all pulling you away from the work that actually matters.
-          <strong> What if you already knew it would work the first time?</strong>
+          We partner with growing businesses to make you money, save you money, and run more efficiently. If we can't do at least one of those three things for you — we won't ask for your time.
         </p>
         <div className="hero-tagline">"Our goal is to grow. Our product is partnership."</div>
         <div className="hero-btns">
@@ -63,19 +63,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <button className="btn-ghost" onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}>Explore Our Solutions</button>
         </div>
       </section>
-
-      {/* ════════ TICKER ════════ */}
-      <div className="ticker">
-        <div className="ticker-track">
-          {[...Array(2)].map((_, rep) => (
-            <React.Fragment key={rep}>
-              {['Creative Care', 'Creative Compensation', 'Creative Wealth Education', 'Creative Web', 'Creative Payments', 'The CSP Platform', 'Health', 'Wealth', 'Technology'].map((t) => (
-                <span className="ticker-item" key={`${rep}-${t}`}>{t} <span className="ticker-sep">✦</span></span>
-              ))}
-            </React.Fragment>
-          ))}
-        </div>
-      </div>
 
       {/* ════════ CHAOS SECTION ════════ */}
       <section className="chaos">
@@ -111,9 +98,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <Reveal>
         <div className="answer-bridge">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 32 }}>
-            <img 
+            <LazyImage 
               src="/images/partnership-handshake.jpg" 
-              alt="Partnership" 
+              alt="Business partners shaking hands, representing the CSP partnership model" 
               style={{ width: '100%', maxWidth: 600, height: 300, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
             />
           </div>
@@ -182,14 +169,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           </div>
           <Reveal className="reveal-d2">
             <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-              <img 
+              <LazyImage 
                 src="/images/connection.jpg" 
-                alt="Human Connection" 
+                alt="CSP advisors working alongside business owners in the field" 
                 style={{ width: '100%', maxWidth: 500, height: 250, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
               />
               <div className="field-stats">
                 <div className="fs-card"><span className="fs-num">1</span><span className="fs-label">Point of contact for every service in your business</span></div>
-                <div className="fs-card"><span className="fs-num">∞</span><span className="fs-label">Growing ecosystem — new solutions added monthly</span></div>
+                <div className="fs-card"><span className="fs-num">5+</span><span className="fs-label">Growing ecosystem — new solutions added regularly</span></div>
                 <div className="fs-card"><span className="fs-num">0</span><span className="fs-label">Vendors to manage on your own</span></div>
                 <div className="fs-card"><span className="fs-num">3</span><span className="fs-label">Core pillars: Health, Wealth, Technology</span></div>
               </div>
@@ -205,9 +192,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <Reveal>
               <div className="section-tag" style={{ justifyContent: 'flex-start' }}>Live ROI</div>
               <div style={{ marginBottom: 24 }}>
-                <img 
+                <LazyImage 
                   src="/images/data-analytics.jpg" 
-                  alt="Data Analytics" 
+                  alt="Data analytics dashboard showing business ROI metrics" 
                   style={{ width: '100%', maxWidth: 450, height: 220, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
                 />
               </div>
@@ -245,9 +232,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       {/* ════════ FINAL CTA ════════ */}
       <section id="contact" className="final-cta">
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 32 }}>
-          <img 
+          <LazyImage 
             src="/images/innovation.jpg" 
-            alt="Innovation" 
+            alt="Business innovation and growth through strategic partnership" 
             style={{ width: '100%', maxWidth: 400, height: 220, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
           />
         </div>
