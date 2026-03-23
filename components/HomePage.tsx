@@ -50,22 +50,18 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <svg className="torch-icon" viewBox="0 0 120 280" fill="none"><ellipse cx="60" cy="100" rx="40" ry="60" fill="rgba(123,63,160,0.6)"/><ellipse cx="60" cy="80" rx="28" ry="44" fill="rgba(201,168,76,0.5)"/><ellipse cx="60" cy="65" rx="16" ry="28" fill="rgba(245,240,232,0.4)"/><rect x="48" y="155" width="24" height="90" rx="4" fill="rgba(201,168,76,0.4)"/><rect x="44" y="148" width="32" height="16" rx="2" fill="rgba(201,168,76,0.5)"/><rect x="40" y="220" width="40" height="8" rx="2" fill="rgba(201,168,76,0.3)"/></svg>
         <div className="hero-eyebrow">Creative Solutions Partners</div>
         <h1 className="hero-title">
-          We Help Growing Businesses{' '}
-          <span className="ht-3">Cut Costs</span> &{' '}
-          <span className="ht-3">Boost Performance</span>
+          <span className="ht-1">Grow.</span>
+          <span className="ht-2">Expand.</span>
+          <span className="ht-3">Simplify.</span>
         </h1>
         <p className="hero-sub">
-          Through one integrated partnership for health, wealth, and technology solutions.
-          <strong> One point of contact. Zero vendor headaches.</strong>
+          We partner with growing businesses to make you money, save you money, and run more efficiently. If we can't do at least one of those three things for you — we won't ask for your time.
         </p>
-        {/* TODO: Uncomment and populate with real client/partner logos */}
-        {/* <ClientLogos /> */}
+        <div className="hero-tagline">"Our goal is to grow. Our product is partnership."</div>
         <div className="hero-btns">
-          <button className="btn-gold" onClick={() => onNavigate('assessment')}>Get Your Free Business Assessment</button>
-          <button className="btn-ghost" onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}>See How It Works</button>
+          <button className="btn-gold" onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}>Find Your Solution</button>
+          <button className="btn-ghost" onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}>Explore Our Solutions</button>
         </div>
-        {/* TODO: Uncomment and add verified rating + review count before enabling */}
-        {/* <StarRating /> */}
       </section>
 
       {/* ════════ CHAOS SECTION ════════ */}

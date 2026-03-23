@@ -83,7 +83,6 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
 
           <button onClick={() => window.open('https://csp-insights.replit.app', '_blank')}>Insights</button>
           <button onClick={() => onNavigate('about')}>About</button>
-          <button onClick={() => onNavigate('assessment')}>Free Assessment</button>
           
           {/* Theme Toggle */}
           <button 
@@ -132,7 +131,6 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
 
           <button onClick={() => { window.open('https://csp-insights.replit.app', '_blank'); setMobileOpen(false); }}>Insights</button>
           <button onClick={() => { onNavigate('about'); setMobileOpen(false); }}>About</button>
-          <button onClick={() => { onNavigate('assessment'); setMobileOpen(false); }}>Free Assessment</button>
           
           {/* Mobile Theme Toggle */}
           <button 
