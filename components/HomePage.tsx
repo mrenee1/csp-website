@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { PageName } from '../types';
 import { PLATFORM_PILLARS } from '../constants';
+import { LazyImage } from './LazyImage';
 
 interface HomePageProps {
   onNavigate: (page: PageName) => void;
@@ -49,33 +50,23 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <svg className="torch-icon" viewBox="0 0 120 280" fill="none"><ellipse cx="60" cy="100" rx="40" ry="60" fill="rgba(123,63,160,0.6)"/><ellipse cx="60" cy="80" rx="28" ry="44" fill="rgba(201,168,76,0.5)"/><ellipse cx="60" cy="65" rx="16" ry="28" fill="rgba(245,240,232,0.4)"/><rect x="48" y="155" width="24" height="90" rx="4" fill="rgba(201,168,76,0.4)"/><rect x="44" y="148" width="32" height="16" rx="2" fill="rgba(201,168,76,0.5)"/><rect x="40" y="220" width="40" height="8" rx="2" fill="rgba(201,168,76,0.3)"/></svg>
         <div className="hero-eyebrow">Creative Solutions Partners</div>
         <h1 className="hero-title">
-          <span className="ht-1">Grow.</span>
-          <span className="ht-2">Expand.</span>
-          <span className="ht-3">Simplify.</span>
+          We Help Growing Businesses{' '}
+          <span className="ht-3">Cut Costs</span> &{' '}
+          <span className="ht-3">Boost Performance</span>
         </h1>
         <p className="hero-sub">
-          Running a business today means drowning in options, tools, vendors, and decisions — all pulling you away from the work that actually matters.
-          <strong> What if you already knew it would work the first time?</strong>
+          Through one integrated partnership for health, wealth, and technology solutions.
+          <strong> One point of contact. Zero vendor headaches.</strong>
         </p>
-        <div className="hero-tagline">"Our goal is to grow. Our product is partnership."</div>
+        {/* TODO: Uncomment and populate with real client/partner logos */}
+        {/* <ClientLogos /> */}
         <div className="hero-btns">
-          <button className="btn-gold" onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}>Find Your Solution</button>
-          <button className="btn-ghost" onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}>Explore Our Solutions</button>
+          <button className="btn-gold" onClick={() => onNavigate('assessment')}>Get Your Free Business Assessment</button>
+          <button className="btn-ghost" onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}>See How It Works</button>
         </div>
+        {/* TODO: Uncomment and add verified rating + review count before enabling */}
+        {/* <StarRating /> */}
       </section>
-
-      {/* ════════ TICKER ════════ */}
-      <div className="ticker">
-        <div className="ticker-track">
-          {[...Array(2)].map((_, rep) => (
-            <React.Fragment key={rep}>
-              {['Creative Care', 'Creative Compensation', 'Creative Wealth Education', 'Creative Web', 'Creative Payments', 'The CSP Platform', 'Health', 'Wealth', 'Technology'].map((t) => (
-                <span className="ticker-item" key={`${rep}-${t}`}>{t} <span className="ticker-sep">✦</span></span>
-              ))}
-            </React.Fragment>
-          ))}
-        </div>
-      </div>
 
       {/* ════════ CHAOS SECTION ════════ */}
       <section className="chaos">
@@ -111,9 +102,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <Reveal>
         <div className="answer-bridge">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 32 }}>
-            <img 
+            <LazyImage 
               src="/images/partnership-handshake.jpg" 
-              alt="Partnership" 
+              alt="Business partners shaking hands, representing the CSP partnership model" 
               style={{ width: '100%', maxWidth: 600, height: 300, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
             />
           </div>
@@ -182,14 +173,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           </div>
           <Reveal className="reveal-d2">
             <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-              <img 
+              <LazyImage 
                 src="/images/connection.jpg" 
-                alt="Human Connection" 
+                alt="CSP advisors working alongside business owners in the field" 
                 style={{ width: '100%', maxWidth: 500, height: 250, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
               />
               <div className="field-stats">
                 <div className="fs-card"><span className="fs-num">1</span><span className="fs-label">Point of contact for every service in your business</span></div>
-                <div className="fs-card"><span className="fs-num">∞</span><span className="fs-label">Growing ecosystem — new solutions added monthly</span></div>
+                <div className="fs-card"><span className="fs-num">5+</span><span className="fs-label">Growing ecosystem — new solutions added regularly</span></div>
                 <div className="fs-card"><span className="fs-num">0</span><span className="fs-label">Vendors to manage on your own</span></div>
                 <div className="fs-card"><span className="fs-num">3</span><span className="fs-label">Core pillars: Health, Wealth, Technology</span></div>
               </div>
@@ -205,9 +196,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <Reveal>
               <div className="section-tag" style={{ justifyContent: 'flex-start' }}>Live ROI</div>
               <div style={{ marginBottom: 24 }}>
-                <img 
+                <LazyImage 
                   src="/images/data-analytics.jpg" 
-                  alt="Data Analytics" 
+                  alt="Data analytics dashboard showing business ROI metrics" 
                   style={{ width: '100%', maxWidth: 450, height: 220, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
                 />
               </div>
@@ -245,9 +236,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       {/* ════════ FINAL CTA ════════ */}
       <section id="contact" className="final-cta">
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 32 }}>
-          <img 
+          <LazyImage 
             src="/images/innovation.jpg" 
-            alt="Innovation" 
+            alt="Business innovation and growth through strategic partnership" 
             style={{ width: '100%', maxWidth: 400, height: 220, objectFit: 'cover', borderRadius: 12, opacity: 0.9 }}
           />
         </div>

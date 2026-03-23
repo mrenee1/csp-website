@@ -16,6 +16,9 @@ import { TeamCarousel } from './components/TeamCarousel';
 import { TopNav } from './components/TopNav';
 import { HomePage } from './components/HomePage';
 import { ChatBot } from './components/ChatBot';
+import { AssessmentPage } from './components/AssessmentPage';
+import { CaseStudiesPage } from './components/CaseStudiesPage';
+import { ExitIntentPopup } from './components/ExitIntentPopup';
 import { ArrowLeft } from 'lucide-react';
 
 export default function App() {
@@ -104,6 +107,8 @@ export default function App() {
 
         {activePage === 'trust' && <TrustCenter onBack={() => navigateTo('home')} onNavigate={navigateTo} />}
         {activePage === 'privacy' && <PrivacyPolicy onBack={() => navigateTo('home')} onNavigate={navigateTo} />}
+        {activePage === 'assessment' && <AssessmentPage onBack={() => navigateTo('home')} onNavigate={navigateTo} />}
+        {activePage === 'case-studies' && <CaseStudiesPage onBack={() => navigateTo('home')} onNavigate={navigateTo} />}
 
         {activePage === 'about' && (
           <div className="py-24 px-6 md:px-12 lg:px-24 animate-fade-in" style={{ background: 'var(--bg)', minHeight: '100vh' }}>
@@ -140,6 +145,9 @@ export default function App() {
 
       {/* Chat Bot */}
       <ChatBot />
+
+      {/* Exit Intent Popup */}
+      <ExitIntentPopup onNavigate={navigateTo} />
     </div>
   );
 }
