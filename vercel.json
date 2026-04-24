@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/quick-intake",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/consultation-intake",
+      "destination": "/index.html"
+    }
+  ]
+}

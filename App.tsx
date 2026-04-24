@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { IntroAnimation } from './components/IntroAnimation';
 import { SERVICES, TEAM_MEMBERS } from './constants';
 import { PageName } from './types';
@@ -16,11 +16,24 @@ import { TopNav } from './components/TopNav';
 import { HomePage } from './components/HomePage';
 import { ChatBot } from './components/ChatBot';
 import { OurSolutionsPage } from './components/OurSolutionsPage';
+import { CreativeCareForm } from './components/CreativeCareForm';
 import { ArrowLeft } from 'lucide-react';
 
+function getPageFromPath(): PageName {
+  if (window.location.pathname === '/quick-intake') return 'quick-intake';
+  if (window.location.pathname === '/consultation-intake') return 'consultation-intake';
+  return 'home';
+}
+
+function getPathForPage(page: PageName) {
+  if (page === 'quick-intake') return '/quick-intake';
+  if (page === 'consultation-intake') return '/consultation-intake';
+  return '/';
+}
+
 export default function App() {
-  const [showIntro, setShowIntro] = useState(true);
-  const [activePage, setActivePage] = useState<PageName>('home');
+  const [activePage, setActivePage] = useState<PageName>(() => getPageFromPath());
+  const [showIntro, setShowIntro] = useState(() => !['quick-intake', 'consultation-intake'].includes(getPageFromPath()));
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState<{email: string} | null>(null);
 
@@ -28,8 +41,19 @@ export default function App() {
 
   const navigateTo = (page: PageName) => {
     setActivePage(page);
+    window.history.pushState({}, '', getPathForPage(page));
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setActivePage(getPageFromPath());
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   const handleLogin = (credentials: { email: string; password: string }) => {
     setIsAuthenticated(true);
@@ -87,6 +111,34 @@ export default function App() {
 
         {activePage === 'trust' && <TrustCenter onBack={() => navigateTo('home')} onNavigate={navigateTo} />}
         {activePage === 'privacy' && <PrivacyPolicy onBack={() => navigateTo('home')} onNavigate={navigateTo} />}
+
+        {activePage === 'quick-intake' && (
+          <div className="min-h-screen px-6 py-16 md:px-12 lg:px-24" style={{
+            background:
+              'radial-gradient(circle at top right, rgba(123, 63, 160, 0.16), transparent 34%), linear-gradient(180deg, #08091a, #0d1020)'
+          }}>
+            <div className="mx-auto max-w-3xl">
+              <button onClick={() => navigateTo('championhealth')} className="mb-8 flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-xs uppercase tracking-[0.2em]">
+                <ArrowLeft size={16} /> Back to Creative Care
+              </button>
+              <CreativeCareForm variant="cta" sourcePage="creative-care-quick-share" />
+            </div>
+          </div>
+        )}
+
+        {activePage === 'consultation-intake' && (
+          <div className="min-h-screen px-6 py-16 md:px-12 lg:px-24" style={{
+            background:
+              'radial-gradient(circle at top right, rgba(123, 63, 160, 0.16), transparent 34%), linear-gradient(180deg, #08091a, #0d1020)'
+          }}>
+            <div className="mx-auto max-w-5xl">
+              <button onClick={() => navigateTo('championhealth')} className="mb-8 flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-xs uppercase tracking-[0.2em]">
+                <ArrowLeft size={16} /> Back to Creative Care
+              </button>
+              <CreativeCareForm variant="consultation" sourcePage="creative-care-consultation-share" />
+            </div>
+          </div>
+        )}
 
         {activePage === 'about' && (
           <div className="py-24 px-6 md:px-12 lg:px-24 animate-fade-in" style={{ background: 'var(--bg)', minHeight: '100vh' }}>

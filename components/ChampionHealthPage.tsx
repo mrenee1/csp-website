@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, ArrowRight, HeartPulse, Brain, Activity, Users, BarChart3, Shield, Smile, Dumbbell, Apple, Moon, X, ChevronRight, CheckCircle2, Sparkles } from 'lucide-react';
+import { ArrowLeft, HeartPulse, Brain, Activity, Users, BarChart3, Shield, Smile, Dumbbell, Apple, Moon, X, ChevronRight, CheckCircle2, Sparkles } from 'lucide-react';
 import { PageName } from '../types';
+import { CreativeCareForm } from './CreativeCareForm';
 
 interface ChampionHealthPageProps {
   onBack: () => void;
@@ -91,8 +92,8 @@ const RevealSection: React.FC<{ children: React.ReactNode; className?: string; d
 };
 
 export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, onNavigate }) => {
-  const [isAssessmentOpen, setIsAssessmentOpen] = useState(false);
   const [activeFeatureIndex, setActiveFeatureIndex] = useState(0);
+  const [isIntakeOpen, setIsIntakeOpen] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -101,77 +102,39 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
     return () => clearInterval(timer);
   }, []);
 
-  const LEAD_EMAIL = 'michelle@creativesolutionspartners.com';
-
   return (
     <div className="bg-[#0a0a0a] relative w-full max-w-[100vw] overflow-x-hidden selection:bg-[#2DD4BF]/30">
-
-      {/* Wellbeing Assessment Modal */}
-      {isAssessmentOpen && (
+      {isIntakeOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-          <div className="absolute inset-0 bg-black/95 backdrop-blur-md" onClick={() => setIsAssessmentOpen(false)}></div>
-          <div className="relative bg-[#18181b] border border-[#2DD4BF]/40 w-full max-w-xl rounded-xl shadow-[0_0_60px_-10px_rgba(45,212,191,0.5)] overflow-hidden animate-slide-up">
-            <div className="bg-[#0a0a0a] text-white p-8 flex justify-between items-start border-b border-white/10">
-              <div>
-                <h3 className="text-2xl font-serif mb-2">Wellbeing Assessment</h3>
-                <p className="text-gray-400 text-sm font-light">Discover the health profile of your organization.</p>
-              </div>
-              <button onClick={() => setIsAssessmentOpen(false)} className="text-gray-500 hover:text-white transition-colors p-1">
-                <X size={24} />
-              </button>
-            </div>
-            <div className="p-8">
-              <form className="space-y-8" onSubmit={(e) => {
-                e.preventDefault();
-                const form = e.target as HTMLFormElement;
-                const org = (form.querySelector('[name="org"]') as HTMLInputElement)?.value || '';
-                const size = (form.querySelector('[name="size"]') as HTMLSelectElement)?.value || '';
-                const concern = (form.querySelector('[name="concern"]:checked') as HTMLInputElement)?.value || '';
-                const email = (form.querySelector('[name="email"]') as HTMLInputElement)?.value || '';
-                const subject = encodeURIComponent('Wellbeing Assessment Request');
-                const body = encodeURIComponent(`Organization: ${org}\nEmployee Count: ${size}\nPrimary Concern: ${concern}\nHR Email: ${email}`);
-                window.location.href = `mailto:${LEAD_EMAIL}?subject=${subject}&body=${body}`;
-                setIsAssessmentOpen(false);
-              }}>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="group">
-                    <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 group-focus-within:text-[#2DD4BF] transition-colors">Organization Name</label>
-                    <input name="org" type="text" className="w-full border border-white/10 bg-white/5 py-3 px-4 rounded-lg text-white placeholder-gray-500 focus:border-[#2DD4BF] focus:outline-none" placeholder="Company Ltd." />
-                  </div>
-                  <div className="group">
-                    <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 group-focus-within:text-[#2DD4BF] transition-colors">Employee Count</label>
-                    <select name="size" className="w-full border border-white/10 bg-white/5 py-3 px-4 rounded-lg text-white focus:border-[#2DD4BF] focus:outline-none cursor-pointer">
-                      <option value="">Select Size</option>
-                      <option value="50-250">50 - 250 Employees</option>
-                      <option value="250-1000">250 - 1,000 Employees</option>
-                      <option value="1000-5000">1,000 - 5,000 Employees</option>
-                      <option value="5000+">5,000+ Employees</option>
-                    </select>
-                  </div>
+          <button
+            type="button"
+            aria-label="Close intake form"
+            className="absolute inset-0 bg-black/90 backdrop-blur-md"
+            onClick={() => setIsIntakeOpen(false)}
+          />
+          <div className="relative z-10 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-xl">
+            <button
+              type="button"
+              onClick={() => setIsIntakeOpen(false)}
+              className="absolute right-4 top-4 z-20 rounded-full border border-white/10 bg-[#08091a]/90 p-2 text-white/60 transition-colors hover:text-white"
+              aria-label="Close intake form"
+            >
+              <X size={20} />
+            </button>
+            <CreativeCareForm
+              variant="cta"
+              sourcePage="creative-care-modal"
+              onSuccess={() => {
+                window.setTimeout(() => setIsIntakeOpen(false), 1800);
+              }}
+              footer={
+                <div className="mt-5">
+                  <a className="csp-creative-care__secondary-link w-full" href="/consultation-intake">
+                    Need a deeper consultation?
+                  </a>
                 </div>
-
-                <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-4">Primary Wellbeing Concern</label>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {['Mental Health & Burnout', 'Physical Inactivity', 'High Absenteeism', 'Low Engagement'].map((opt) => (
-                      <label key={opt} className="flex items-center gap-3 p-4 border border-white/10 rounded-lg hover:border-[#2DD4BF]/40 hover:bg-[#2DD4BF]/5 cursor-pointer transition-all">
-                        <input type="radio" name="concern" value={opt} className="w-4 h-4 text-[#2DD4BF] border-gray-500 focus:ring-[#2DD4BF]" />
-                        <span className="text-sm text-gray-300 font-medium">{opt}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="group">
-                  <label className="block text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-2 group-focus-within:text-[#2DD4BF] transition-colors">HR Contact Email</label>
-                  <input name="email" type="email" required className="w-full border border-white/10 bg-white/5 py-3 px-4 rounded-lg text-white placeholder-gray-500 focus:border-[#2DD4BF] focus:outline-none" placeholder="hr@company.com" />
-                </div>
-
-                <button type="submit" className="w-full bg-[#2DD4BF] text-[#0a0a0a] py-5 font-bold hover:bg-[#5eead4] transition-all duration-500 uppercase tracking-[0.2em] text-xs flex justify-center items-center gap-3 rounded-lg">
-                  Request Wellbeing Report <ArrowRight size={16} />
-                </button>
-              </form>
-            </div>
+              }
+            />
           </div>
         </div>
       )}
@@ -206,10 +169,10 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
 
               <div className="flex flex-col sm:flex-row gap-6 pt-4">
                 <button
-                  onClick={() => setIsAssessmentOpen(true)}
-                  className="bg-[#2DD4BF] text-[#0a0a0a] px-10 py-5 font-bold hover:bg-[#5eead4] transition-all duration-500 w-full sm:w-auto text-center rounded-sm shadow-[0_0_40px_-10px_rgba(45,212,191,0.5)] uppercase tracking-widest text-xs"
+                  onClick={() => setIsIntakeOpen(true)}
+                  className="bg-[#C5A059] text-[#0a0a0a] px-10 py-5 font-bold hover:bg-[#D4AF37] transition-all duration-500 w-full sm:w-auto text-center rounded-sm shadow-[0_0_40px_-10px_rgba(197,160,89,0.35)] uppercase tracking-widest text-xs"
                 >
-                  Get Your Wellbeing Report
+                  Get Your Wellbeing Assessment
                 </button>
                 <div className="hidden sm:flex items-center text-[10px] text-gray-500 uppercase tracking-[0.2em] font-medium border-l border-gray-700 pl-6">
                   Science-Backed. <br /> Data-Driven.
@@ -453,28 +416,28 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
           {/* CTA Card */}
           <RevealSection delay={400} className="flex justify-center lg:justify-end">
             <div
-              className="relative flex flex-col gap-8 p-10 w-full max-w-[28rem] rounded-2xl overflow-hidden group shadow-[0_0_50px_-10px_rgba(45,212,191,0.35)] transform transition-all duration-700 hover:-translate-y-4 hover:shadow-[0_0_60px_-10px_rgba(45,212,191,0.5)] border border-[#2DD4BF]/20"
+              className="relative flex flex-col gap-8 p-10 w-full max-w-[28rem] rounded-2xl overflow-hidden group shadow-[0_0_50px_-10px_rgba(197,160,89,0.28)] transform transition-all duration-700 hover:-translate-y-4 hover:shadow-[0_0_60px_-10px_rgba(197,160,89,0.4)] border border-[#C5A059]/25"
               style={{
                 backgroundColor: '#111827',
                 backgroundImage: `
                   radial-gradient(at 88% 40%, rgba(17, 24, 39, 1) 0px, transparent 85%),
-                  radial-gradient(at 0% 64%, rgba(45, 212, 191, 0.25) 0px, transparent 85%),
-                  radial-gradient(at 41% 94%, rgba(197, 160, 89, 0.2) 0px, transparent 85%)
+                  radial-gradient(at 0% 64%, rgba(45, 212, 191, 0.18) 0px, transparent 85%),
+                  radial-gradient(at 41% 94%, rgba(197, 160, 89, 0.24) 0px, transparent 85%)
                 `,
                 boxShadow: '0px -16px 40px 0px rgba(255, 255, 255, 0.05) inset'
               }}
             >
               <div className="relative z-10">
                 <span className="text-white font-serif text-3xl font-bold tracking-tight block mb-2">Wellbeing Assessment</span>
-                <p className="text-gray-400 text-sm font-light leading-relaxed">Understand your workforce health risk profile.</p>
+                <p className="text-gray-400 text-sm font-light leading-relaxed">Answer a few quick questions and a Creative Care partner will follow up.</p>
               </div>
 
               <div className="h-[1px] w-full bg-white/10 relative z-10"></div>
 
               <ul className="flex flex-col gap-5 relative z-10">
-                {['Mental Health Benchmark', 'Physical Activity Index', 'Sleep Quality Score', 'Engagement Forecast'].map((item, idx) => (
+                {['Healthcare Cost Review', 'Benefits Education', 'Employee Support', 'Coverage Strategy'].map((item, idx) => (
                   <li key={item} className="flex items-center gap-4 group/li transition-transform duration-300 hover:translate-x-2" style={{ transitionDelay: `${idx * 50}ms` }}>
-                    <span className="flex items-center justify-center w-6 h-6 bg-[#2DD4BF] rounded-full shrink-0 shadow-lg shadow-[#2DD4BF]/30">
+                    <span className="flex items-center justify-center w-6 h-6 bg-[#C5A059] rounded-full shrink-0 shadow-lg shadow-[#C5A059]/30">
                       <svg className="w-3.5 h-3.5 text-[#0a0a0a] fill-current" viewBox="0 0 16 16">
                         <path clipRule="evenodd" d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z" fillRule="evenodd" />
                       </svg>
@@ -485,11 +448,18 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
               </ul>
 
               <button
-                onClick={() => setIsAssessmentOpen(true)}
-                className="relative z-10 w-full py-5 rounded-full text-[#0a0a0a] font-bold text-xs uppercase tracking-[0.3em] shadow-2xl transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] bg-[#2DD4BF] hover:bg-[#5eead4] hover:shadow-[#2DD4BF]/40"
+                onClick={() => setIsIntakeOpen(true)}
+                className="relative z-10 w-full py-5 rounded-full text-[#0a0a0a] font-bold text-xs uppercase tracking-[0.3em] shadow-2xl transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] bg-[#C5A059] hover:bg-[#D4AF37] hover:shadow-[#C5A059]/40"
               >
                 Start Assessment
               </button>
+
+              <a
+                href="/consultation-intake"
+                className="relative z-10 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-[#C5A059] underline-offset-4 hover:underline"
+              >
+                Need a deeper consultation?
+              </a>
 
               <div className="absolute inset-0 bg-white/[0.02] pointer-events-none"></div>
             </div>

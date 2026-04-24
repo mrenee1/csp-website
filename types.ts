@@ -1,7 +1,7 @@
 
 import { LucideIcon } from 'lucide-react';
 
-export type PageName = 'home' | 'health' | 'finance' | 'tech' | 'about' | 'solutions' | 'clarity' | 'wealthwave' | 'championhealth' | 'bizboost' | 'creativepayments' | 'partner-application' | 'trust' | 'privacy' | 'terms';
+export type PageName = 'home' | 'health' | 'finance' | 'tech' | 'about' | 'solutions' | 'clarity' | 'wealthwave' | 'championhealth' | 'bizboost' | 'creativepayments' | 'partner-application' | 'trust' | 'privacy' | 'terms' | 'quick-intake' | 'consultation-intake';
 
 export interface NavItem {
   id: string;
