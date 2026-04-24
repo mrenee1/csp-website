@@ -54,7 +54,7 @@ async function appendBlobSpreadsheet(pathname: string, row: string) {
   let existing = `${csvColumns.join(',')}\n`;
 
   try {
-    const blob = await get(pathname, { access: 'private', useCache: false });
+    const blob = await get(pathname, { access: 'public' });
     if (blob?.statusCode === 200 && blob.stream) {
       existing = await streamToText(blob.stream);
       if (!existing.endsWith('\n')) {
@@ -66,7 +66,7 @@ async function appendBlobSpreadsheet(pathname: string, row: string) {
   }
 
   const result = await put(pathname, `${existing}${row}\n`, {
-    access: 'private',
+    access: 'public',
     allowOverwrite: true,
     contentType: 'text/csv; charset=utf-8',
   });
