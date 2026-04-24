@@ -1,5 +1,5 @@
-import { notifyCreativeCareSubmission } from './creativeCareNotifications';
-import { saveCreativeCareSubmission } from './creativeCareSubmissions';
+import { notifyCreativeCareSubmission } from './creativeCareNotifications.js';
+import { saveCreativeCareSubmission } from './creativeCareSubmissions.js';
 
 export async function handleCreativeCareSubmission(payload: Record<string, unknown>, root = process.cwd()) {
   const saveResult = await saveCreativeCareSubmission(payload, root);

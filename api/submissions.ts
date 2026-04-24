@@ -1,4 +1,4 @@
-import { handleCreativeCareSubmission } from '../lib/creativeCareSubmissionHandler';
+import { handleCreativeCareSubmission } from '../lib/creativeCareSubmissionHandler.js';
 
 async function readJsonBody(req: any) {
   if (req.body && typeof req.body === 'object') {
