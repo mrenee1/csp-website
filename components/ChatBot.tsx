@@ -84,8 +84,8 @@ const FAQ_RESPONSES: Record<string, string> = {
   'biz boost': 'Creative Web (formerly associated with Biz Boost Agency) provides web design, brand identity, social media management, SEO & ads, email marketing, and business consulting for modern businesses.',
   'bizboost': 'Creative Web provides professional web design, brand identity, social media management, SEO & ads, email marketing, and business consulting.',
 
-  'portal': 'The CSP Portal is our partner login area. If you\'re an existing partner, you can access it through the "CSP Portal" button in the navigation.',
-  'login': 'The CSP Portal is available through the navigation bar. Existing partners can log in there to access partner resources.',
+  'portal': 'The CSP Portal is our partner workspace at https://creative-client.vercel.app. Existing partners can access it through the "CSP Portal" button in the navigation.',
+  'login': 'The CSP Portal is available at https://creative-client.vercel.app and through the navigation bar. Existing partners can log in there to access partner resources.',
 
   'founded': 'Creative Solutions Partners was founded in 2025 as a strategic growth firm.',
   'location': 'CSP serves businesses across the United States. Reach us at michelle@creativesolutionspartners.com.',

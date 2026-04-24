@@ -10,6 +10,8 @@ interface TopNavProps {
   onLogout?: () => void;
 }
 
+const PARTNER_PORTAL_URL = 'https://creative-client.vercel.app';
+
 export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthenticated = false, onLogout }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
@@ -41,6 +43,11 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
 
   const nav = (page: PageName) => {
     onNavigate(page);
+    setMobileOpen(false);
+  };
+
+  const openPartnerPortal = () => {
+    window.location.href = PARTNER_PORTAL_URL;
     setMobileOpen(false);
   };
 
@@ -105,7 +112,7 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
           {isAuthenticated ? (
             <button className="nav-cta-btn" onClick={onLogout}>Logout</button>
           ) : (
-            <button className="nav-cta-btn" onClick={() => onNavigate('login')}>CSP Portal</button>
+            <button className="nav-cta-btn" onClick={openPartnerPortal}>CSP Portal</button>
           )}
         </div>
 
@@ -142,6 +149,9 @@ export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthen
 
           <button onClick={() => { window.open('https://creativesolutionsinsights.com/', '_blank'); setMobileOpen(false); }}>Insights</button>
           <button onClick={() => { onNavigate('about'); setMobileOpen(false); }}>About</button>
+          {!isAuthenticated && (
+            <button onClick={openPartnerPortal}>CSP Portal</button>
+          )}
           
           {/* Mobile Theme Toggle */}
           <button 
