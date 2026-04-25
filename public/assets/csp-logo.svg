@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Creative Solutions Partners logo</title>
+  <desc id="desc">CSP monogram for Creative Solutions Partners.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1f1735"/>
+      <stop offset="55%" stop-color="#0d1020"/>
+      <stop offset="100%" stop-color="#08091a"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f2d77a"/>
+      <stop offset="50%" stop-color="#c9a84c"/>
+      <stop offset="100%" stop-color="#8e7036"/>
+    </linearGradient>
+  </defs>
+  <circle cx="256" cy="256" r="244" fill="url(#bg)" stroke="url(#gold)" stroke-width="12"/>
+  <circle cx="256" cy="256" r="204" fill="none" stroke="#c9a84c" stroke-opacity="0.22" stroke-width="2"/>
+  <text x="256" y="278" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="118" font-weight="700" fill="url(#gold)" letter-spacing="8">CSP</text>
+  <text x="256" y="336" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#e8e4dc" letter-spacing="8">CREATIVE SOLUTIONS</text>
+  <text x="256" y="374" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#8892b0" letter-spacing="10">PARTNERS</text>
+</svg>

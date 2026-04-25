@@ -141,7 +141,7 @@ export const ClarityPage: React.FC<{ onBack: () => void; onNavigate: (page: Page
                <div className="inline-flex items-center gap-2 bg-[#06b6d4]/20 text-[#06b6d4] px-4 py-1.5 rounded-sm text-[10px] font-bold uppercase tracking-[0.2em] border border-[#06b6d4]/30">
                   Coming Soon · Audit-Grade Financial Infrastructure
                </div>
-               <img src="/images/clarity-commissions-logo.jpg" alt="Clarity Commissions Logo" className="w-64 h-auto mb-6 drop-shadow-lg" />
+               <img src="/assets/clarity_logo.png" alt="Clarity Commissions automated commission tracking logo" className="w-64 h-auto mb-6 drop-shadow-lg" />
                <h1 className="text-5xl sm:text-6xl md:text-8xl font-serif font-medium leading-[1.1]">
                  Clarity <span className="text-[#06b6d4]">Commissions</span>
                </h1>

@@ -119,8 +119,8 @@ export const IntroAnimation: React.FC<IntroAnimationProps> = ({ onComplete }) =>
         <div className="intro-pulse-ring-2" />
         <img
           className="intro-logo-img"
-          src="/images/csp-logo-circle.png"
-          alt="Creative Solutions Partners"
+          src="/assets/csp-logo.svg"
+          alt="Creative Solutions Partners CSP logo"
         />
       </div>
     </div>

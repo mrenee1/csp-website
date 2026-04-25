@@ -24,7 +24,7 @@ export const WealthWavePage: React.FC<WealthWavePageProps> = ({ onBack, onNaviga
           <div className="lg:w-1/2">
              <img 
                src="/wealthwave-logo.png" 
-               alt="WealthWave" 
+               alt="WealthWave financial literacy education logo" 
                className="h-16 md:h-20 mb-6"
              />
              <p className="text-lg md:text-2xl text-white/80 font-light max-w-2xl leading-relaxed mb-6">
@@ -52,7 +52,7 @@ export const WealthWavePage: React.FC<WealthWavePageProps> = ({ onBack, onNaviga
           <div className="lg:w-1/2 flex justify-center">
              <img 
                src="/how-money-works-books.png" 
-               alt="How Money Works Books" 
+               alt="How Money Works financial literacy books from WealthWave" 
                className="max-w-md w-full drop-shadow-2xl"
              />
           </div>

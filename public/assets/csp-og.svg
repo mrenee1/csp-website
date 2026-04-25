@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Creative Solutions Partners social preview</title>
+  <desc id="desc">Creative Solutions Partners health, wealth, and technology consulting for growing businesses.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#08091a"/>
+      <stop offset="52%" stop-color="#1a0a2e"/>
+      <stop offset="100%" stop-color="#0d1033"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="20%" r="58%">
+      <stop offset="0%" stop-color="#7b3fa0" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#7b3fa0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="#f2d77a"/>
+      <stop offset="50%" stop-color="#c9a84c"/>
+      <stop offset="100%" stop-color="#8e7036"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g opacity="0.16" stroke="#c9a84c" stroke-width="1">
+    <path d="M0 115H1200M0 245H1200M0 375H1200M0 505H1200M145 0V630M315 0V630M485 0V630M655 0V630M825 0V630M995 0V630"/>
+  </g>
+  <circle cx="172" cy="162" r="66" fill="none" stroke="url(#gold)" stroke-width="4"/>
+  <text x="172" y="180" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-weight="700" fill="url(#gold)" letter-spacing="4">CSP</text>
+  <text x="92" y="274" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#c9a84c" letter-spacing="6">CREATIVE SOLUTIONS PARTNERS</text>
+  <text x="92" y="360" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="#f5f0e8">B2B Health, Wealth</text>
+  <text x="92" y="432" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="700" fill="#f5f0e8">&amp; Technology Consulting</text>
+  <text x="92" y="496" font-family="Arial, sans-serif" font-size="26" fill="#8892b0">Jacksonville, FL " Florida " United States</text>
+  <g transform="translate(92 548)">
+    <rect width="168" height="42" rx="21" fill="#c9a84c"/>
+    <text x="84" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#08091a" letter-spacing="2">HEALTH</text>
+    <rect x="188" width="170" height="42" rx="21" fill="#111530" stroke="#c9a84c" stroke-opacity="0.45"/>
+    <text x="273" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#c9a84c" letter-spacing="2">FINANCE</text>
+    <rect x="378" width="206" height="42" rx="21" fill="#111530" stroke="#5ba8d4" stroke-opacity="0.55"/>
+    <text x="481" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#5ba8d4" letter-spacing="2">TECHNOLOGY</text>
+  </g>
+</svg>

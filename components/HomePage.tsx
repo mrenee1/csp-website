@@ -6,6 +6,71 @@ interface HomePageProps {
   onNavigate: (page: PageName) => void;
 }
 
+const solutionPillars: Array<{
+  id: string;
+  number: string;
+  title: string;
+  className: string;
+  summary: string;
+  subservices: Array<{ title: string; page: PageName; description: string }>;
+}> = [
+  {
+    id: 'health-solutions',
+    number: '01',
+    title: 'Health Solutions',
+    className: 'p-health',
+    summary:
+      'Health Solutions helps employers build healthier teams while controlling the rising cost of care. Through Creative Care, CSP supports business owners, HR leaders, and operations teams with practical health benefits strategy, employee wellness guidance, and prevention-minded programs that fit real workplaces. From Jacksonville, FL to companies across Florida and the United States, we focus on measurable outcomes: stronger retention, healthier employees, fewer avoidable disruptions, and a benefits experience your team can actually understand.',
+    subservices: [
+      {
+        title: 'Creative Care',
+        page: 'championhealth',
+        description: 'Employer health strategy, wellness support, and healthcare cost reduction programs.',
+      },
+    ],
+  },
+  {
+    id: 'finance-solutions',
+    number: '02',
+    title: 'Finance Solutions',
+    className: 'p-ops',
+    summary:
+      'Finance Solutions brings together financial education and payment infrastructure so growing businesses can make better decisions with money. WealthWave helps owners and teams understand how money works, build confidence, and plan with clarity. Impact Payments supports modern merchant services and payment systems that keep revenue moving. For Jacksonville, FL organizations and Florida companies expanding nationally, CSP connects finance tools to business goals, employee education, customer experience, and long-term operational resilience.',
+    subservices: [
+      {
+        title: 'WealthWave',
+        page: 'wealthwave',
+        description: 'Financial literacy and wealth-building education for owners, employees, and families.',
+      },
+      {
+        title: 'Impact Payments',
+        page: 'creativepayments',
+        description: 'Payment processing and merchant services designed for modern business operations.',
+      },
+    ],
+  },
+  {
+    id: 'technology-solutions',
+    number: '03',
+    title: 'Technology Solutions',
+    className: 'p-brand',
+    summary:
+      'Technology Solutions gives business owners the digital infrastructure to look credible, move faster, and reduce manual work. Creative Web builds websites, brand systems, and digital growth foundations that help clients find and trust your company. Clarity Commissions supports automated commission tracking for teams that need accurate, transparent compensation workflows. CSP helps operations teams choose technology that supports real growth instead of adding another disconnected tool to manage.',
+    subservices: [
+      {
+        title: 'Creative Web',
+        page: 'bizboost',
+        description: 'Website design, brand development, SEO foundations, and digital growth systems.',
+      },
+      {
+        title: 'Clarity Commissions',
+        page: 'clarity',
+        description: 'Automated commission tracking and compensation transparency for complex teams.',
+      },
+    ],
+  },
+];
+
 /* ── Scroll reveal hook ── */
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -36,11 +101,21 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="hero-glow2" />
         <div className="hero-eyebrow">Creative Solutions Partners</div>
         <h1 className="hero-title">
-          <span className="ht-1">Grow.</span>
-          <span className="ht-2">Expand.</span>
-          <span className="ht-3">Simplify.</span>
+          <span className="ht-1">Integrated Health,</span>
+          <span className="ht-2">Wealth &amp; Technology</span>
+          <span className="ht-3">Solutions for Growing Businesses</span>
         </h1>
+        <p className="hero-subheadline">
+          Creative Solutions Partners helps business owners, HR leaders, and operations teams align benefits,
+          financial education, payments, websites, and automation through one trusted consulting partner in
+          Jacksonville, FL serving Florida and the United States.
+        </p>
         <div className="hero-tagline">"Our goal is to grow. Our product is partnership."</div>
+        <nav className="hero-link-row" aria-label="Solution shortcuts">
+          <a href="#health-solutions">Health Solutions</a>
+          <a href="#finance-solutions">Finance Solutions</a>
+          <a href="#technology-solutions">Technology Solutions</a>
+        </nav>
         <div className="hero-btns">
           <button className="btn-gold" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Start the Conversation</button>
           <button className="btn-ghost" onClick={() => onNavigate('about')}>Learn About CSP</button>
@@ -49,6 +124,42 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
       {/* ════════ PROMISE ════════ */}
       <CSPPromiseSection />
+
+      {/* ════════ SOLUTION PILLARS ════════ */}
+      <section className="pillars" aria-labelledby="solutions-heading">
+        <div className="pillars-intro">
+          <div className="section-tag">Integrated Consulting</div>
+          <h2 id="solutions-heading">Health, Wealth &amp; Technology Working Together</h2>
+          <p className="pillar-intro-copy">
+            CSP is built for leaders who need practical answers, not another vendor list. We connect strategy,
+            services, and implementation across the areas that most affect growth: employee health, financial
+            confidence, payment operations, web presence, and workflow clarity.
+          </p>
+        </div>
+        <div className="pillars-grid">
+          {solutionPillars.map((pillar) => (
+            <Reveal key={pillar.id} className={`pillar ${pillar.className}`}>
+              <div className="pillar-glow" />
+              <div className="p-header">
+                <h2 id={pillar.id} className="p-title">{pillar.title}</h2>
+                <span className="p-num">{pillar.number}</span>
+              </div>
+              <p className="p-desc">{pillar.summary}</p>
+              <div className="subservice-list">
+                {pillar.subservices.map((service) => (
+                  <article key={service.title} className="solution-subservice">
+                    <h3>{service.title}</h3>
+                    <p>{service.description}</p>
+                    <button className="p-link" onClick={() => onNavigate(service.page)}>
+                      Explore {service.title} →
+                    </button>
+                  </article>
+                ))}
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
 
       {/* ════════ CHAOS SECTION ════════ */}
       <section className="chaos">
@@ -72,9 +183,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <Reveal>
         <div className="answer-bridge">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 24 }}>
-            <img 
-              src="/images/partnership-handshake.jpg" 
-              alt="Partnership" 
+            <img
+              src="/assets/csp-og.svg"
+              alt="Creative Solutions Partners consulting partnership across health, finance, and technology"
               style={{ width: '100%', maxWidth: 560, height: 260, objectFit: 'cover', borderRadius: 10, opacity: 0.9 }}
             />
           </div>
@@ -107,10 +218,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       {/* ════════ FINAL CTA ════════ */}
       <section id="contact" className="final-cta">
         <div className="section-tag">The First Step</div>
-        <h2>Let's build<br/>something <em>that lasts.</em></h2>
-        <p>No fluff, no templates. A genuine partnership built around your goals, your business, and your definition of success.</p>
+        <h2>Schedule a<br/><em>Partnership Call.</em></h2>
+        <p>Talk with CSP about the health, finance, or technology gap slowing your business down. We will help you identify the right next step for your Jacksonville, FL or Florida-based team.</p>
         <div style={{ display: 'flex', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
-          <a href="mailto:michelle@creativesolutionspartners.com" className="btn-gold">Begin the Conversation</a>
+          <a href="mailto:michelle@creativesolutionspartners.com?subject=Schedule%20a%20Partnership%20Call" className="btn-gold">Schedule a Partnership Call</a>
         </div>
       </section>
 
@@ -138,6 +249,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="footer-col">
           <h4>Company</h4>
           <button onClick={() => onNavigate('solutions')}>Our Platform</button>
+          <a href="#health-solutions">Health Solutions</a>
+          <a href="#finance-solutions">Finance Solutions</a>
+          <a href="#technology-solutions">Technology Solutions</a>
           <button onClick={() => onNavigate('about')}>About Us</button>
           <button onClick={() => onNavigate('partner-application')}>Become a Partner</button>
         </div>

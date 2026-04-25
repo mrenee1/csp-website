@@ -52,7 +52,7 @@ export const TeamCarousel: React.FC<TeamCarouselProps> = ({ members }) => {
             >
               <img 
                 src={member.image} 
-                alt={member.name} 
+                alt={`${member.name}, ${member.role} at Creative Solutions Partners`}
                 className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700"
               />
               {/* Premium overlay gradient */}

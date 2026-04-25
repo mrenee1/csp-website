@@ -29,7 +29,7 @@ export const ImpactPaymentsPage: React.FC<ImpactPaymentsPageProps> = ({ onBack, 
             <div className="flex items-center gap-6 mb-8">
               <img 
                 src="https://img.logo.dev/impactpaymentgroup.com?token=pk_YNp0UPuFROeXqQQR8ut6Fg&format=png&retina=true" 
-                alt="Impact Payment Group Logo" 
+                alt="Impact Payment Group payment processing partner logo" 
                 className="h-20 w-auto"
               />
               <h1 className="text-5xl md:text-7xl font-serif font-medium leading-tight">
