@@ -94,6 +94,7 @@ const RevealSection: React.FC<{ children: React.ReactNode; className?: string; d
 export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, onNavigate }) => {
   const [activeFeatureIndex, setActiveFeatureIndex] = useState(0);
   const [isIntakeOpen, setIsIntakeOpen] = useState(false);
+  const [intakeVariant, setIntakeVariant] = useState<'cta' | 'consultation'>('cta');
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -101,6 +102,16 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
     }, 5000);
     return () => clearInterval(timer);
   }, []);
+
+  const openQuickIntake = () => {
+    setIntakeVariant('cta');
+    setIsIntakeOpen(true);
+  };
+
+  const openConsultationIntake = () => {
+    setIntakeVariant('consultation');
+    setIsIntakeOpen(true);
+  };
 
   return (
     <div className="bg-[#0a0a0a] relative w-full max-w-[100vw] overflow-x-hidden selection:bg-[#2DD4BF]/30">
@@ -112,7 +123,7 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
             className="absolute inset-0 bg-black/90 backdrop-blur-md"
             onClick={() => setIsIntakeOpen(false)}
           />
-          <div className="relative z-10 w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-xl">
+          <div className={`relative z-10 w-full ${intakeVariant === 'consultation' ? 'max-w-5xl' : 'max-w-3xl'} max-h-[90vh] overflow-y-auto rounded-xl`}>
             <button
               type="button"
               onClick={() => setIsIntakeOpen(false)}
@@ -122,17 +133,24 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
               <X size={20} />
             </button>
             <CreativeCareForm
-              variant="cta"
-              sourcePage="creative-care-modal"
+              key={intakeVariant}
+              variant={intakeVariant}
+              sourcePage={intakeVariant === 'consultation' ? 'creative-care-consultation-modal' : 'creative-care-modal'}
               onSuccess={() => {
                 window.setTimeout(() => setIsIntakeOpen(false), 1800);
               }}
               footer={
-                <div className="mt-5">
-                  <a className="csp-creative-care__secondary-link w-full" href="/consultation-intake">
-                    Need a deeper consultation?
-                  </a>
-                </div>
+                intakeVariant === 'cta' ? (
+                  <div className="mt-5">
+                    <button
+                      type="button"
+                      className="csp-creative-care__secondary-link w-full"
+                      onClick={openConsultationIntake}
+                    >
+                      Need a deeper consultation?
+                    </button>
+                  </div>
+                ) : null
               }
             />
           </div>
@@ -169,7 +187,7 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
 
               <div className="flex flex-col sm:flex-row gap-6 pt-4">
                 <button
-                  onClick={() => setIsIntakeOpen(true)}
+                  onClick={openQuickIntake}
                   className="bg-[#C5A059] text-[#0a0a0a] px-10 py-5 font-bold hover:bg-[#D4AF37] transition-all duration-500 w-full sm:w-auto text-center rounded-sm shadow-[0_0_40px_-10px_rgba(197,160,89,0.35)] uppercase tracking-widest text-xs"
                 >
                   Get Your Wellbeing Assessment
@@ -448,18 +466,19 @@ export const ChampionHealthPage: React.FC<ChampionHealthPageProps> = ({ onBack, 
               </ul>
 
               <button
-                onClick={() => setIsIntakeOpen(true)}
+                onClick={openQuickIntake}
                 className="relative z-10 w-full py-5 rounded-full text-[#0a0a0a] font-bold text-xs uppercase tracking-[0.3em] shadow-2xl transition-all duration-500 hover:scale-[1.02] active:scale-[0.98] bg-[#C5A059] hover:bg-[#D4AF37] hover:shadow-[#C5A059]/40"
               >
                 Start Assessment
               </button>
 
-              <a
-                href="/consultation-intake"
+              <button
+                type="button"
+                onClick={openConsultationIntake}
                 className="relative z-10 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-[#C5A059] underline-offset-4 hover:underline"
               >
                 Need a deeper consultation?
-              </a>
+              </button>
 
               <div className="absolute inset-0 bg-white/[0.02] pointer-events-none"></div>
             </div>

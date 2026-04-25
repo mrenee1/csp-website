@@ -10,7 +10,7 @@ interface TopNavProps {
   onLogout?: () => void;
 }
 
-const PARTNER_PORTAL_URL = 'https://creative-client.vercel.app';
+const PARTNER_PORTAL_URL = 'https://creative-client-n9pkx5rcs-michellewilliamsdev.vercel.app';
 
 export const TopNav: React.FC<TopNavProps> = ({ activePage, onNavigate, isAuthenticated = false, onLogout }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
