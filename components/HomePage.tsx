@@ -20,7 +20,7 @@ const solutionPillars: Array<{
     title: 'Health Solutions',
     className: 'p-health',
     summary:
-      'Health Solutions helps employers build healthier teams while controlling the rising cost of care. Through Creative Care, CSP supports business owners, HR leaders, and operations teams with practical health benefits strategy, employee wellness guidance, and prevention-minded programs that fit real workplaces. From Jacksonville, FL to companies across Florida and the United States, we focus on measurable outcomes: stronger retention, healthier employees, fewer avoidable disruptions, and a benefits experience your team can actually understand.',
+      'Health Solutions helps employers build healthier teams while controlling the rising cost of care. Through Creative Care, CSP supports business owners, HR leaders, and operations teams with practical health benefits strategy, employee wellness guidance, and prevention-minded programs that fit real workplaces. Serving organizations across the United States, we focus on measurable outcomes: stronger retention, healthier employees, fewer avoidable disruptions, and a benefits experience your team can actually understand, communicate, and sustain as your company grows.',
     subservices: [
       {
         title: 'Creative Care',
@@ -35,7 +35,7 @@ const solutionPillars: Array<{
     title: 'Finance Solutions',
     className: 'p-ops',
     summary:
-      'Finance Solutions brings together financial education and payment infrastructure so growing businesses can make better decisions with money. WealthWave helps owners and teams understand how money works, build confidence, and plan with clarity. Impact Payments supports modern merchant services and payment systems that keep revenue moving. For Jacksonville, FL organizations and Florida companies expanding nationally, CSP connects finance tools to business goals, employee education, customer experience, and long-term operational resilience.',
+      'Finance Solutions brings together financial education and payment infrastructure so growing businesses can make better decisions with money. WealthWave helps owners and teams understand how money works, build confidence, and plan with clarity. Impact Payments supports modern merchant services and payment systems that keep revenue moving. For organizations across the United States, CSP connects finance tools to business goals, employee education, customer experience, cash flow, and long-term operational resilience without forcing leaders to manage disconnected providers.',
     subservices: [
       {
         title: 'WealthWave',
@@ -55,7 +55,7 @@ const solutionPillars: Array<{
     title: 'Technology Solutions',
     className: 'p-brand',
     summary:
-      'Technology Solutions gives business owners the digital infrastructure to look credible, move faster, and reduce manual work. Creative Web builds websites, brand systems, and digital growth foundations that help clients find and trust your company. Clarity Commissions supports automated commission tracking for teams that need accurate, transparent compensation workflows. CSP helps operations teams choose technology that supports real growth instead of adding another disconnected tool to manage.',
+      'Technology Solutions gives business owners the digital infrastructure to look credible, move faster, and reduce manual work. Creative Web builds websites, brand systems, SEO foundations, and digital growth systems that help clients find and trust your company. Clarity Commissions supports automated commission tracking for teams that need accurate, transparent compensation workflows. Across the United States, CSP helps operations teams choose technology that supports real growth instead of adding another disconnected tool to manage, troubleshoot, or explain to employees.',
     subservices: [
       {
         title: 'Creative Web',
@@ -108,13 +108,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <p className="hero-subheadline">
           Creative Solutions Partners helps business owners, HR leaders, and operations teams align benefits,
           financial education, payments, websites, and automation through one trusted consulting partner in
-          Jacksonville, FL serving Florida and the United States.
+          the United States.
         </p>
         <div className="hero-tagline">"Our goal is to grow. Our product is partnership."</div>
         <nav className="hero-link-row" aria-label="Solution shortcuts">
-          <a href="#health-solutions">Health Solutions</a>
-          <a href="#finance-solutions">Finance Solutions</a>
-          <a href="#technology-solutions">Technology Solutions</a>
+          <a href="/#health-solutions">Health Solutions</a>
+          <a href="/#finance-solutions">Finance Solutions</a>
+          <a href="/#technology-solutions">Technology Solutions</a>
+          <a href="/#about">About</a>
+          <a href="/#contact">Contact</a>
         </nav>
         <div className="hero-btns">
           <button className="btn-gold" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Start the Conversation</button>
@@ -196,7 +198,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       </Reveal>
 
       {/* ════════ IN THE FIELD ════════ */}
-      <section className="field">
+      <section id="about" className="field">
         <div className="field-inner">
           <Reveal>
             <div className="section-tag">In The Field</div>
@@ -219,7 +221,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       <section id="contact" className="final-cta">
         <div className="section-tag">The First Step</div>
         <h2>Schedule a<br/><em>Partnership Call.</em></h2>
-        <p>Talk with CSP about the health, finance, or technology gap slowing your business down. We will help you identify the right next step for your Jacksonville, FL or Florida-based team.</p>
+        <p>Talk with CSP about the health, finance, or technology gap slowing your business down. We will help you identify the right next step for your team anywhere in the United States.</p>
         <div style={{ display: 'flex', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
           <a href="mailto:michelle@creativesolutionspartners.com?subject=Schedule%20a%20Partnership%20Call" className="btn-gold">Schedule a Partnership Call</a>
         </div>
@@ -249,9 +251,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="footer-col">
           <h4>Company</h4>
           <button onClick={() => onNavigate('solutions')}>Our Platform</button>
-          <a href="#health-solutions">Health Solutions</a>
-          <a href="#finance-solutions">Finance Solutions</a>
-          <a href="#technology-solutions">Technology Solutions</a>
+          <a href="/#health-solutions">Health Solutions</a>
+          <a href="/#finance-solutions">Finance Solutions</a>
+          <a href="/#technology-solutions">Technology Solutions</a>
+          <a href="/#about">About</a>
+          <a href="/#contact">Contact</a>
           <button onClick={() => onNavigate('about')}>About Us</button>
           <button onClick={() => onNavigate('partner-application')}>Become a Partner</button>
         </div>
